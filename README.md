@@ -1,5 +1,3 @@
-# digiAltar
-
 # digi-Altar
 
 **digi-Altar** is a cyber spiritual space, where you can create, share, and inspire your own altar using a hybrid mix of relics and artifacts. Images may link to actual objects that you may purchase and add to your own physical sanctuary. 
@@ -173,7 +171,7 @@ src
 
 #### ERD Model
 
-![ERD](https://i.imgur.com/pT7rbbl.png)
+![ERD](https://i.imgur.com/8BepqIK.png)
 <br>
 
 ***
