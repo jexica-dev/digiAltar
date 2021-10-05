@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
+
+.logo-container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+.logo-header {
+  font-family: 'Sarina', sans-serif;
+  font-size: 75px;
+  color: yellow;  
+}
+
+.logo-container a:link {
+  text-decoration: none;
+}
