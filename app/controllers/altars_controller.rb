@@ -40,6 +40,15 @@ class AltarsController < ApplicationController
     @altar.destroy
   end
 
+#adding images to altar
+
+# def add_image_to_altar
+#   @altar = Altar.find(params[:id])
+#   @image = Image.find(params[:image_id])
+
+#   @altar.images << @image
+# end  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_altar
@@ -48,6 +57,6 @@ class AltarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def altar_params
-      params.require(:altar).permit(:name, :user_id, :privacy)
+      params.require(:altar).permit(:name, :privacy)
     end
 end
