@@ -32,6 +32,7 @@ The **digi-Altar** MVP will include an interactive homepage, the shared collecti
 |  React DnD | React DnD is a set of React utilities to help you build complex drag and drop interfaces while keeping your components decoupled. |
 |  Axios | Axios is a simple promise based HTTP client for the browser and node.js.  |
 |  bcrypt() | bcrypt() is a sophisticated and secure hash algorithm designed by The OpenBSD project for hashing passwords. The bcrypt Ruby gem provides a simple wrapper for safely handling passwords. |
+|  JWT | A ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard. |
 
 
 <br>
