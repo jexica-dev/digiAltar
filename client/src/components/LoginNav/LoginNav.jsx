@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 export default function LoginNav() {
   return (
     <div>
-      <Link>
+      <Link to='/login'>
         Login
       </Link>
-      <Link>
+      <Link to='/signup'>
         Signup
       </Link>
 

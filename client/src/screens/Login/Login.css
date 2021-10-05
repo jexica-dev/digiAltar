@@ -1,0 +1,29 @@
+.signin-container {
+  justify-content: center;
+  margin-top: 25%;
+  display: flex;
+
+}
+
+button {
+
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+/* 
+.flex-container {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-container li {
+  flex: 1 0 120px;
+  max-width: 220px;
+  margin: 0;
+} */
+

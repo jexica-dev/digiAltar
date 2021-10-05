@@ -20,9 +20,8 @@ color: yellow;
 }
 
 #star {
-  font-size: 45px;
-  margin: .5rem;
-
+  font-size: 38px;
+  /* margin-bottom: -5rem; */
 }
 
 .footer-nav-container a:link {
