@@ -1,5 +1,6 @@
 class AltarsController < ApplicationController
   before_action :set_altar, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /altars
   def index
@@ -16,6 +17,7 @@ class AltarsController < ApplicationController
   # POST /altars
   def create
     @altar = Altar.new(altar_params)
+    @altar.user = @current_user
 
     if @altar.save
       render json: @altar, status: :created, location: @altar
