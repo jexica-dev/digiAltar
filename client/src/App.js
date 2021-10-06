@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
-      setCurrentUser(userData)
+      setCurrentUser(userData);
     };
     handleVerify();
   }, []);
