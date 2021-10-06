@@ -11,11 +11,10 @@ export default function UserAltars(props) {
       <Button onClick={props.handleLogout}>Logout</Button></div>
       
       {props.altars.map((altar) => (
-      <h1 className="text-primary mt-2 text-center">{altar.name} </h1>
+        <AltarCard images={props.images} altar={altar}/>
       ))}
-      <AltarCard />
-      <Button>Edit</Button>
-      <Button>Delete</Button>
+
+
       <Button>Create</Button>
       
     </>

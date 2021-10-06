@@ -27,17 +27,18 @@ export default function Main(props) {
     fetchImages();
   }, []);
 
+  
   return (
     <div>
       <Switch>
         <Route path="/collection">
-          <Collection altars={altars} />
+          <Collection images={images}  altars={altars} />
         </Route>
         <Route path="/create">
-          <Create altars={altars}/>
+          <Create images={images} altars={altars}/>
         </Route>
         <Route path="/myaltars">
-          <UserAltars user={props.user} altars={altars} handleLogout={props.handleLogout}/>
+          <UserAltars images={images} user={props.user} altars={altars} handleLogout={props.handleLogout}/>
         </Route>
         <Route path="/about">
           <About />
