@@ -4,7 +4,11 @@ import AltarImage from '../AltarImage/AltarImage'
 
 
 export default function AltarCard(props) {
+
+
   
+
+
 console.log(props.images)
   return (
     <div className="text-center"> 

@@ -3,13 +3,16 @@ import { Switch, Route, Redirect } from "react-router";
 import { getAllAltars } from "../../services/altars";
 import { getAllImages } from "../../services/images";
 import Collection from "../Collection/Collection";
-import Create from "../Create/Create";
 import About from "../About/About.jsx";
 import UserAltars from "../UserAltars/UserAltars";
+import AltarEdit from "../AltarEdit/AltarEdit";
+import { useParams } from 'react-router';
+
 
 export default function Main(props) {
   const [altars, setAltars] = useState([]);
   const [images, setImages] = useState([]);
+  
 
   useEffect(() => {
     const fetchAltars = async () => {
@@ -34,11 +37,11 @@ export default function Main(props) {
         <Route path="/collection">
           <Collection images={images}  altars={altars} />
         </Route>
-        <Route path="/create">
-          <Create images={images} altars={altars}/>
+        <Route path={"/myaltars/"} exact>
+          <UserAltars user={props.user} images={images}  altars={altars} />
         </Route>
-        <Route path="/myaltars">
-          <UserAltars images={images} user={props.user} altars={altars} handleLogout={props.handleLogout}/>
+        <Route path="/myaltars/:altarId/edit">
+          <AltarEdit images={images}  altars={altars} />
         </Route>
         <Route path="/about">
           <About />
