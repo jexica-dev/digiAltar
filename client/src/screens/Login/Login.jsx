@@ -27,7 +27,7 @@ export default function Login(props) {
     <>
       <LoginNav />
       <Headline>Welcome,</Headline>
-      <form className="signin-container" onSubmit={handleSubmit}>
+      <form className="signin-container" onClick={handleSubmit}>
         <ul>
           <li>
             <input

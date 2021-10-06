@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router";
 import Login from "./screens/Login/Login";
 import Signup from "./screens/Signup/Signup";
@@ -9,8 +9,7 @@ import About from "./screens/About/About.jsx";
 import Layout from "./components/Layout/Layout.jsx";
 import UserAltars from "./screens/UserAltars/UserAltars";
 
-import { loginUser, registerUser, verifyUser } from "./services/auth";
-import UserAltars from "./screens/UserAltars/UserAltars";
+import { loginUser, registerUser, removeToken, verifyUser } from "./services/auth";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -27,14 +26,22 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/myaltars');
   };
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/myaltars');
   };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+
+    localStorage.removeItem('authToken');
+    removeToken();
+    history.push('/');
+  }
 
   return (
     <div className="App">
@@ -56,7 +63,7 @@ function App() {
           <About />
         </Route>
         <Route path="/myaltars">
-          <UserAltars />
+          <UserAltars handleLogout={handleLogout}/>
         </Route>
       </Switch>
     </div>
