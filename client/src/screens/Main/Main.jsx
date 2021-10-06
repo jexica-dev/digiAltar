@@ -37,7 +37,7 @@ export default function Main(props) {
           <Create altars={altars}/>
         </Route>
         <Route path="/myaltars">
-          <UserAltars users={props.users} altars={altars} handleLogout={props.handleLogout}/>
+          <UserAltars user={props.user} altars={altars} handleLogout={props.handleLogout}/>
         </Route>
         <Route path="/about">
           <About />
