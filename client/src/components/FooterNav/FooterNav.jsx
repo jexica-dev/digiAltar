@@ -2,16 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './FooterNav.css'
 
-export default function FooterNav() {
+export default function FooterNav(props) {
   return (
     <div className="footer-nav-container">
       <Link to="/collection">
         collection
       </Link>
       <span className="nav-symbol">◊</span>
-      <Link to="/create">
+      { props.currentUser ? 
+        <Link to="/myaltars">
         create
-      </Link>
+      </Link> : <Link to="/login">
+        create
+      </Link>}
       <span className="nav-symbol" id="star">*</span>
       <Link to="/about">
         about

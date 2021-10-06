@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Signup.css";
 import LoginNav from "../../components/LoginNav/LoginNav";
 import Headline from "../../components/Headline/Headline";
+import Button from "../../components/Button/Button";
 
 export default function Signup(props) {
   const [formData, setFormData] = useState({
@@ -74,9 +75,7 @@ export default function Signup(props) {
             />
           </li>
           <li className="text-right">
-            <button className="rounded-full py-2 px-7 text-black bg-primary bg-opacity-100 border border-primary hover:bg-trp hover:text-primary">
-              sign up
-            </button>
+            <Button>sign up</Button>
           </li>
         </ul>
       </form>

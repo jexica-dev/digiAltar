@@ -3,11 +3,9 @@ import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router";
 import Login from "./screens/Login/Login";
 import Signup from "./screens/Signup/Signup";
-import Collection from "./screens/Collection/Collection";
-import Create from "./screens/Create/Create";
-import About from "./screens/About/About.jsx";
 import Layout from "./components/Layout/Layout.jsx";
 import UserAltars from "./screens/UserAltars/UserAltars";
+import Main from "./screens/Main/Main";
 
 import { loginUser, registerUser, removeToken, verifyUser } from "./services/auth";
 
@@ -37,7 +35,6 @@ function App() {
 
   const handleLogout = () => {
     setCurrentUser(null);
-
     localStorage.removeItem('authToken');
     removeToken();
     history.push('/');
@@ -45,25 +42,19 @@ function App() {
 
   return (
     <div className="App">
-      <Layout />
+      <Layout currentUser={currentUser} />
       <Switch>
         <Route path="/login">
-          <Login handleLogin={handleLogin} />
+          <Login handleLogin={handleLogin} handleLogout={handleLogout} />
         </Route>
         <Route path="/signup">
           <Signup handleRegister={handleRegister} />
         </Route>
-        <Route path="/collection">
-          <Collection />
-        </Route>
-        <Route path="/create">
-          <Create />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
         <Route path="/myaltars">
           <UserAltars handleLogout={handleLogout}/>
+        </Route>
+        <Route path="/">
+          <Main currentUser={currentUser}/>
         </Route>
       </Switch>
     </div>

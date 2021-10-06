@@ -9,7 +9,7 @@ export default function Layout(props) {
       <div className="layout-container">
         <Header />
         <div className="layout-children">{props.children}</div>
-        <FooterNav />
+        <FooterNav currentUser={props.currentUser}/>
       </div>
     </>
   );

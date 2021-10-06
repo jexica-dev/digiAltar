@@ -5,7 +5,7 @@ import './Header.css'
 export default function Header() {
   return (
     <div className="logo-container">
-      <Link to="/">
+      <Link to="/" exact>
       <header className="logo-header">digiAltar</header>
       </Link>
     </div>
