@@ -5,15 +5,15 @@ import './FooterNav.css'
 export default function FooterNav() {
   return (
     <div className="footer-nav-container">
-      <Link>
+      <Link to="/collection">
         collection
       </Link>
       <span className="nav-symbol">◊</span>
-      <Link>
+      <Link to="/create">
         create
       </Link>
       <span className="nav-symbol" id="star">*</span>
-      <Link>
+      <Link to="/about">
         about
       </Link>
       {/* ∆ */}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function LoginNav() {
   return (
-    <div>
+    <div className="login-nav-container text-primary ">
       <Link to='/login'>
         Login
       </Link>
