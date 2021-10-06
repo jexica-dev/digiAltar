@@ -9,7 +9,7 @@ export default function FooterNav(props) {
         collection
       </Link>
       <span className="nav-symbol">◊</span>
-      { props.currentUser ? 
+      { props.user ? 
         <Link to="/myaltars">
         create
       </Link> : <Link to="/login">
