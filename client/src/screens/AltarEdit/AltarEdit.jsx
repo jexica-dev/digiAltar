@@ -1,6 +1,7 @@
 import React from 'react'
-import AltarCard from '../../components/AltarCard/AltarCard'
 import { useParams } from 'react-router';
+import AltarForm from '../../components/AltarForm/AltarForm';
+
   
 export default function AltarEdit(props) {
   const { altarId } = useParams();
@@ -9,7 +10,11 @@ export default function AltarEdit(props) {
       {props.altars.filter((altar) => {
         console.log(altar.id)
         return (altar.id == altarId);
-      }).map((altar) => {console.log(altar)})}
+      }).map((altar) => {
+        return (
+          <AltarForm />
+        )
+      })}
   
       
     </div>

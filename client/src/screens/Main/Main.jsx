@@ -12,6 +12,7 @@ import { useParams } from 'react-router';
 export default function Main(props) {
   const [altars, setAltars] = useState([]);
   const [images, setImages] = useState([]);
+  const [collection, setCollection] = useState(true);
   
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Main(props) {
       setAltars(altarList);
     };
     fetchAltars();
+    setCollection();
   }, []);
 
   useEffect(() => {
@@ -35,7 +37,7 @@ export default function Main(props) {
     <div>
       <Switch>
         <Route path="/collection">
-          <Collection images={images}  altars={altars} />
+          <Collection collection={collection} images={images}  altars={altars} />
         </Route>
         <Route path={"/myaltars/"} exact>
           <UserAltars user={props.user} images={images}  altars={altars} />
