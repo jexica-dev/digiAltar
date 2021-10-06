@@ -1,18 +1,23 @@
 import React from "react";
 import './UserAltars';
 import Button from "../../components/Button/Button";
+import AltarCard from "../../components/AltarCard/AltarCard";
 
 export default function UserAltars(props) {
   return (
     <>
-      <div className="mt-32 text-right mr-12"><span className="text-primary mr-8"> Welcome, {props.username}.</span> 
+      {/* {props.users.map((user) => ( */}
+      <div className="mt-32 text-right mr-12"><span className="text-primary mr-8"> Welcome, username.</span>
       <Button onClick={props.handleLogout}>Logout</Button></div>
-      
-      
-      <h1 className="text-primary mt-24 text-center">User Altars</h1>
+      {/* ))} */}
+      {props.altars.map((altar) => (
+      <h1 className="text-primary mt-2 text-center">{altar.name} </h1>
+      ))}
+      <AltarCard />
       <Button>Edit</Button>
       <Button>Delete</Button>
       <Button>Create</Button>
+      
     </>
   );
 }

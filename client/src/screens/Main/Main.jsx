@@ -5,6 +5,7 @@ import { getAllImages } from "../../services/images";
 import Collection from "../Collection/Collection";
 import Create from "../Create/Create";
 import About from "../About/About.jsx";
+import UserAltars from "../UserAltars/UserAltars";
 
 export default function Main(props) {
   const [altars, setAltars] = useState([]);
@@ -32,15 +33,11 @@ export default function Main(props) {
         <Route path="/collection">
           <Collection altars={altars} />
         </Route>
-        {/* <Route path="/userAltar">
-          {props.currentUser ? (
-            <Create currentUser={props.currentUser} />
-          ) : (
-            <Redirect to="/login" />
-          )}
-        </Route> */}
         <Route path="/create">
-          <Create />
+          <Create altars={altars}/>
+        </Route>
+        <Route path="/myaltars">
+          <UserAltars users={props.users} altars={altars} handleLogout={props.handleLogout}/>
         </Route>
         <Route path="/about">
           <About />

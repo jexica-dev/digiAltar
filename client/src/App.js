@@ -50,11 +50,9 @@ function App() {
         <Route path="/signup">
           <Signup handleRegister={handleRegister} />
         </Route>
-        <Route path="/myaltars">
-          <UserAltars handleLogout={handleLogout}/>
-        </Route>
+        
         <Route path="/">
-          <Main currentUser={currentUser}/>
+          <Main currentUser={currentUser} handleLogout={handleLogout}/>
         </Route>
       </Switch>
     </div>
