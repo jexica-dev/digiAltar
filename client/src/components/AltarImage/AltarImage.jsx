@@ -29,15 +29,48 @@ export default function AltarImage(props) {
       ) : null}
 
       {props.imageType === 7 ? (
-        <img src="https://i.imgur.com/5pHBSWA.png" alt="calavera1" />
+        <img  className="w-34" src="https://i.imgur.com/JBfJOkL.png" alt="led2" />
       ) : null}
 
       {props.imageType === 8 ? (
-        <img src="https://i.imgur.com/5pHBSWA.png" alt="calavera1" />
+        <img src="https://i.imgur.com/xe2MhVj.png" alt="fruit1" />
       ) : null}
 
       {props.imageType === 9 ? (
-        <img src="https://i.imgur.com/5pHBSWA.png" alt="calavera1" />
+        <img src="https://i.imgur.com/TUNNl7v.png" alt="flower2" />
+      ) : null}
+
+      {props.imageType === 10 ? (
+        <img src="https://i.imgur.com/Gw6tHOA.png" alt="crystals1" />
+      ) : null}
+
+
+      {props.imageType === 11 ? (
+        <img src="https://i.imgur.com/1O6Dyg3.png" alt="ganesha1" />
+      ) : null}
+
+      {props.imageType === 12 ? (
+        <img className="w-24" src="https://i.imgur.com/kInduau.png" alt="candle2" />
+      ) : null}
+
+      {props.imageType === 13 ? (
+        <img src="https://imgur.com/VJ2pXzU" alt="sage1" />
+      ) : null}
+
+      {props.imageType === 14 ? (
+        <img src="https://i.imgur.com/kFFDKji.png" alt="book1" />
+      ) : null}
+
+      {props.imageType === 15 ? (
+        <img src="https://i.imgur.com/8AjKLn4.png" alt="cactus1" />
+      ) : null}
+
+      {props.imageType === 16 ? (
+        <img src="https://i.imgur.com/Q3cjvqp.png" alt="book1" />
+      ) : null}
+
+      {props.imageType === 17 ? (
+        <img className="w-44" src="https://i.imgur.com/hkIetv9.png" alt="combo1" />
       ) : null}
 
 
