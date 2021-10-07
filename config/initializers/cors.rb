@@ -10,7 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'https://digialtar.netlify.app/'
     # ^ we will replace * with the deployed link
 
-    resource '*',
+    resource 'https://git.heroku.com/digialtar-api.git',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
