@@ -8,11 +8,10 @@ export default function AltarEdit(props) {
   return (
     <div>
       {props.altars.filter((altar) => {
-        console.log(altar.id)
         return (altar.id == altarId);
       }).map((altar) => {
         return (
-          <AltarForm />
+          <AltarForm user={props.user} images={props.images}  altar={altar} />
         )
       })}
   

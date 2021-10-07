@@ -5,8 +5,10 @@ import "./UserAltars";
 import Button from "../../components/Button/Button";
 import AltarCard from "../../components/AltarCard/AltarCard";
 import { createAltar } from "../../services/altars";
+import { deleteAltar } from "../../services/altars";
 
 export default function UserAltars(props) {
+  const history = useHistory();
 
   const randomName = [
     "Hypnotic",
@@ -25,8 +27,6 @@ export default function UserAltars(props) {
     "Artshrine",
   ];
 
-  const history = useHistory();
-
   const handleCreate = async (e) => {
     e.preventDefault();
     const newAltar = {
@@ -40,7 +40,7 @@ export default function UserAltars(props) {
     const created = await createAltar(newAltar);
     if (created) {
       history.push(`/myaltars/${created.id}/edit`);
-      props.setToggleFetch((prevState)=>(!prevState))
+      props.setToggleFetch((prevState) => !prevState);
     }
   };
 
@@ -52,16 +52,47 @@ export default function UserAltars(props) {
             Welcome, {props.user.username}.
           </span>
           <Button onClick={props.handleLogout}>Logout</Button>
+          <div className="flex justify-end">
+            <button
+              onClick={handleCreate}
+              className="rounded-full py-2 px-7 text-black bg-secondary bg-opacity-100 border border-secondary hover:bg-trp hover:text-primary"
+            >
+              Create
+            </button>
+          </div>
         </div>
       ) : null}
 
       {props.altars.map((altar) =>
         props.user?.id === altar.user_id ? (
-          <AltarCard setToggleFetch={props.setToggleFetch} user={props.user} images={props.images} altar={altar} />
+          <>
+            <AltarCard
+              setToggleFetch={props.setToggleFetch}
+              user={props.user}
+              images={props.images}
+              altar={altar}
+            />
+            <Button
+              onClick={(e) => {
+                e.preventDefault();
+                history.push(`/myaltars/${altar.id}/edit`);
+              }}
+            >
+              Edit
+            </Button>
+            <Button
+              onClick={(e) => {
+                deleteAltar(altar.id);
+                setTimeout(() => {
+                  props.setToggleFetch((prevState) => !prevState);
+                }, 500);
+              }}
+            >
+              Delete
+            </Button>
+          </>
         ) : null
       )}
-
-      <Button onClick={handleCreate}>Create</Button>
     </>
   );
 }

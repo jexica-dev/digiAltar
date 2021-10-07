@@ -29,6 +29,7 @@ export default function AltarCard(props) {
         .map((image) => (
           <>
             <AltarImage user={props.user} image={image} />
+            
           </>
         ))}
 
@@ -37,8 +38,7 @@ export default function AltarCard(props) {
       ) : (
         <>
           <h3 className="text-primary mt-2 mb-4">{props.altar.name}</h3>
-          <Button onClick={handleEdit}>Edit</Button>
-          <Button onClick={handleDelete}>Delete</Button>
+          
         </>
       )}
     </div>
