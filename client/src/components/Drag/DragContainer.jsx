@@ -15,8 +15,14 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     // this data can hold anything that is relevant
     // for creating the draggable elements later.
     // you can store an image ID to pass into altarimages here for example.
-    a: { top: 20, left: 80, imageType: 1 },
-    b: { top: 180, left: 20, imageType: 2 },
+
+    a: { top: 75, left: 175, imageType: 6 },
+    b: { top: 20, left: 80, imageType: 1 },
+    c: { top: 180, left: 20, imageType: 2 },
+    d: { top: 300, left: 300, imageType: 3 },
+    e: { top: 150, left: 125, imageType: 4 },
+    f: { top: 375, left: 340, imageType: 5 },
+
   });
   const moveBox = useCallback(
     (id, left, top) => {
