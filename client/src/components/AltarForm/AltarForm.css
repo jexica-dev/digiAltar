@@ -1,0 +1,14 @@
+.edit-altar-container {
+  justify-content: center;
+  display: flex;
+}
+
+.toggle-checkbox:checked {
+  @apply: right-0 border-primary;
+  right: 0;
+  border-color: black;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-primary;
+  background-color: yellow;
+}
