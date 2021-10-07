@@ -28,7 +28,7 @@ export default function AltarCard(props) {
         })
         .map((image) => (
           <>
-            <AltarImage user={props.user} image={image} />
+            <AltarImage user={props.user} imageType={image.image_type} />
             
           </>
         ))}

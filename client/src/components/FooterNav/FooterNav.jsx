@@ -4,7 +4,7 @@ import './FooterNav.css'
 
 export default function FooterNav(props) {
   return (
-    <div className="footer-nav-container">
+    <div className="footer-nav-container z-10">
       <Link to="/collection">
         collection
       </Link>

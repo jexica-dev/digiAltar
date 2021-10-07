@@ -1,6 +1,7 @@
 import { React } from "react";
 import "./AltarForm.css";
 import AltarCard from "../AltarCard/AltarCard";
+import AltarImage from "../AltarImage/AltarImage";
 
 export default function AltarForm(props) {
   return (
@@ -46,6 +47,10 @@ export default function AltarForm(props) {
           <p className="w-full -mt-10 text-primary justify-right">
             {"<<"} drag + drop
           </p>
+          
+          <button className="bg-trp" onClick={console}>
+          <AltarImage imageType={1} />
+          </button>
         </div>
       </div>
     </>
