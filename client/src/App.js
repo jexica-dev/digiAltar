@@ -7,6 +7,7 @@ import Layout from "./components/Layout/Layout.jsx";
 import UserAltars from "./screens/UserAltars/UserAltars";
 import Main from "./screens/Main/Main";
 
+
 import { loginUser, registerUser, removeToken, verifyUser } from "./services/auth";
 
 function App() {
