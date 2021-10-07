@@ -13,6 +13,8 @@ export default function Main(props) {
   const [altars, setAltars] = useState([]);
   const [images, setImages] = useState([]);
   const [collection, setCollection] = useState(true);
+  const [toggleFetch, setToggleFetch] = useState(false);
+  
   
 
   useEffect(() => {
@@ -22,7 +24,7 @@ export default function Main(props) {
     };
     fetchAltars();
     setCollection();
-  }, []);
+  }, [toggleFetch]);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -30,7 +32,7 @@ export default function Main(props) {
       setImages(imageList);
     };
     fetchImages();
-  }, []);
+  }, [toggleFetch]);
 
   
   return (
@@ -40,7 +42,7 @@ export default function Main(props) {
           <Collection collection={collection} images={images}  altars={altars} />
         </Route>
         <Route path={"/myaltars/"} exact>
-          <UserAltars user={props.user} images={images}  altars={altars} />
+          <UserAltars setToggleFetch={setToggleFetch} handleLogout={props.handleLogout} user={props.user} images={images}  altars={altars} />
         </Route>
         <Route path="/myaltars/:altarId/edit">
           <AltarEdit images={images}  altars={altars} />
