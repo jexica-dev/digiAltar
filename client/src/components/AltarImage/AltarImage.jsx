@@ -5,7 +5,7 @@ export default function AltarImage(props) {
   return (
     <div>
       {props.imageType === 1 ? (
-        <img className="" src="https://i.imgur.com/SwSjwZt.png" alt="flower1" />
+        <img className="w-24" src="https://i.imgur.com/SwSjwZt.png" alt="flower1" />
       ) : null}
 
       {props.imageType === 2 ? (
@@ -21,7 +21,7 @@ export default function AltarImage(props) {
       ) : null}
 
       {props.imageType === 5 ? (
-        <img src="https://i.imgur.com/t0Lbcf2.png" alt="bowl1" />
+        <img className="w-24" src="https://i.imgur.com/t0Lbcf2.png" alt="bowl1" />
       ) : null}
 
       {props.imageType === 6 ? (
@@ -54,23 +54,31 @@ export default function AltarImage(props) {
       ) : null}
 
       {props.imageType === 13 ? (
-        <img src="https://imgur.com/VJ2pXzU" alt="sage1" />
+        <img className="w-32" src="https://i.imgur.com/VJ2pXzU.png" alt="sage1" />
       ) : null}
 
       {props.imageType === 14 ? (
-        <img src="https://i.imgur.com/kFFDKji.png" alt="book1" />
+        <img className="w-40" src="https://i.imgur.com/kFFDKji.png" alt="book1" />
       ) : null}
 
       {props.imageType === 15 ? (
-        <img src="https://i.imgur.com/8AjKLn4.png" alt="cactus1" />
+        <img className="w-24" src="https://i.imgur.com/8AjKLn4.png" alt="cactus1" />
       ) : null}
 
       {props.imageType === 16 ? (
-        <img src="https://i.imgur.com/Q3cjvqp.png" alt="book1" />
+        <img className="w-24" src="https://i.imgur.com/Q3cjvqp.png" alt="cup1" />
       ) : null}
 
       {props.imageType === 17 ? (
         <img className="w-44" src="https://i.imgur.com/hkIetv9.png" alt="combo1" />
+      ) : null}
+
+      {props.imageType === 18 ? (
+        <img className="w-20" src="https://i.imgur.com/lR5yXku.png" alt="candle3" />
+      ) : null}
+
+      {props.imageType === 19 ? (
+        <img className="w-20" src="https://i.imgur.com/f0A81Bs.png" alt="candle3" />
       ) : null}
 
 
