@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '*'
+    origins 'https://digialtar.netlify.app/'
     # ^ we will replace * with the deployed link
 
     resource '*',
