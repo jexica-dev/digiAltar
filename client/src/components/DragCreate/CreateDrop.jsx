@@ -30,6 +30,6 @@ export const CreateDrop = () => {
         backgroundColor = '#9395ff';
     }
     return (<div ref={drop} role={'Altar'} style={{ ...style, backgroundColor }}>
-			{isActive ? 'Release to drop' : 'Drag a box here'}
+			{isActive ? 'Release to drop' : 'Drag item here'}
 		</div>);
 };
