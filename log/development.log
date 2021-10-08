@@ -10188,3 +10188,116 @@ Completed 200 OK in 51ms (Views: 31.5ms | ActiveRecord: 18.4ms | Allocations: 20
 Completed 200 OK in 84ms (Views: 0.2ms | ActiveRecord: 36.3ms | Allocations: 3645)
 
 
+Started GET "/auth/verify" for ::1 at 2021-10-07 20:10:34 -0400
+Started GET "/images" for ::1 at 2021-10-07 20:10:34 -0400
+Started GET "/altars" for ::1 at 2021-10-07 20:10:34 -0400
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mImage Load (5.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mAltar Load (16.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 97ms (Views: 28.8ms | ActiveRecord: 54.3ms | Allocations: 17128)
+
+
+Completed 200 OK in 94ms (Views: 18.9ms | ActiveRecord: 65.3ms | Allocations: 18372)
+
+
+  [1m[36mUser Load (21.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 117ms (Views: 0.2ms | ActiveRecord: 102.1ms | Allocations: 20416)
+
+
+Started GET "/altars" for ::1 at 2021-10-07 20:10:50 -0400
+Started GET "/images" for ::1 at 2021-10-07 20:10:50 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (1.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2021-10-07 20:10:50 -0400
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.4ms | Allocations: 1604)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAltar Load (3.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 3.3ms | Allocations: 2997)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 2241)
+
+
+Started GET "/images" for ::1 at 2021-10-07 20:13:50 -0400
+Started GET "/altars" for ::1 at 2021-10-07 20:13:50 -0400
+Processing by ImagesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-10-07 20:13:50 -0400
+Processing by AltarsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mImage Load (7.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 228ms (Views: 210.4ms | ActiveRecord: 7.8ms | Allocations: 1588)
+
+
+  [1m[36mAltar Load (9.5ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 206ms (Views: 194.8ms | ActiveRecord: 9.5ms | Allocations: 2517)
+
+
+  [1m[36mUser Load (72.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 307ms (Views: 1.0ms | ActiveRecord: 87.8ms | Allocations: 3265)
+
+
+Started GET "/altars" for ::1 at 2021-10-07 20:16:28 -0400
+Started GET "/images" for ::1 at 2021-10-07 20:16:28 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (8.5ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 72ms (Views: 60.1ms | ActiveRecord: 8.5ms | Allocations: 1429)
+
+
+  [1m[36mImage Load (63.6ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 106ms (Views: 42.5ms | ActiveRecord: 63.6ms | Allocations: 2339)
+
+
+Started GET "/altars" for ::1 at 2021-10-07 20:19:59 -0400
+Started GET "/images" for ::1 at 2021-10-07 20:19:59 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (7.1ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 132ms (Views: 100.9ms | ActiveRecord: 7.1ms | Allocations: 1429)
+
+
+  [1m[36mImage Load (198.0ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 280ms (Views: 81.1ms | ActiveRecord: 198.0ms | Allocations: 2360)
+
+
+Started GET "/auth/verify" for ::1 at 2021-10-07 20:45:24 -0400
+Started GET "/images" for ::1 at 2021-10-07 20:45:24 -0400
+Started GET "/altars" for ::1 at 2021-10-07 20:45:24 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (39.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mAltar Load (41.9ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 320ms (Views: 319.2ms | ActiveRecord: 220.0ms | Allocations: 6909)
+
+
+Completed 200 OK in 344ms (Views: 338.0ms | ActiveRecord: 230.3ms | Allocations: 8108)
+
+
+  [1m[36mUser Load (57.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 445ms (Views: 0.3ms | ActiveRecord: 242.8ms | Allocations: 9828)
+
+

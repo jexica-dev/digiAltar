@@ -1,14 +1,14 @@
 import api from "./api_config";
 
 export const getAllAltars = async () => {
-  const resp = await api.get("/altars");
-  return resp.data;
+  const res = await api.get("/altars");
+  return res.data;
 };
 
 export const getAltar = async (id) => {
   try {
-    const response = await api.get(`/altar/${id}`);
-    return response.data;
+    const res= await api.get(`/altars/${id}`);
+    return res.data;
   } catch (error) {
     throw error;
   }
@@ -25,6 +25,6 @@ export const updateAltar = async (id, altar) => {
 };
 
 export const deleteAltar = async (id) => {
-  const response = await api.delete(`/altars/${id}`);
-  return response.data;
+  const res = await api.delete(`/altars/${id}`);
+  return res.data;
 };

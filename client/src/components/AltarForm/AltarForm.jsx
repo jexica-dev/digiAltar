@@ -2,6 +2,7 @@ import { React } from "react";
 import "./AltarForm.css";
 import AltarCard from "../AltarCard/AltarCard";
 import AltarImage from "../AltarImage/AltarImage";
+import CreateApp from "../DragCreate/CreateApp";
 
 export default function AltarForm(props) {
   return (
@@ -38,10 +39,18 @@ export default function AltarForm(props) {
       {/* Form for draggable saved images */}
 
       <div className="flex flex-row">
+        
         {/* Left Box below */}
+        
         <div className="create-altar-container mt-4 ml-8 w-1/2 h-80 justify-left border border-primary">
-          <AltarCard setToggleFetch={props.setToggleFetch} user={props.user} images={props.images} altar={props.altar} />
+          {/* <AltarCard setToggleFetch={props.setToggleFetch} user={props.user} images={props.images} altar={props.altar} /> */}
+
+          <CreateApp />
+
+
         </div>
+
+
         {/* Right Box below*/}
         <div className="altar-image-container mt-4 mr-8 w-1/2 h-80 justify-right border border-primary">
           <p className="w-full -mt-10 text-primary justify-right">
