@@ -21,7 +21,7 @@ export default function AltarCard(props) {
 
   console.log(props.images);
   return (
-    <div className="text-center">
+    <div className="">
       {props.images
         .filter((image) => {
           return image.altar_id === props.altar.id;
@@ -33,13 +33,13 @@ export default function AltarCard(props) {
           </>
         ))}
 
-      {props.collection ? (
-        <h5 className="text-primary mt-2 mb-4">{props.altar.name}</h5>
+      {/* {props.collection ? (
+        <h1 className="text-primary mt-2 mb-4">{props.altar.name}</h1>
       ) : (
         <>
-          <h3 className="text-primary mt-2 mb-4">{props.altar.name}</h3>
+          <h5 className="text-primary mt-2 mb-4">{props.altar.name}</h5>
           
-        </>
+        </> */}
       )}
     </div>
   );

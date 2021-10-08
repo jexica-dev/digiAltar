@@ -78,7 +78,7 @@ export default function AltarImage(props) {
       ) : null}
 
       {props.imageType === 19 ? (
-        <img className="w-20" src="https://i.imgur.com/f0A81Bs.png" alt="candle3" />
+        <img className="w-36" src="https://i.imgur.com/f0A81Bs.png" alt="candle3" />
       ) : null}
 
 

@@ -2,7 +2,7 @@ import { React } from "react";
 import "./AltarForm.css";
 import AltarCard from "../AltarCard/AltarCard";
 import AltarImage from "../AltarImage/AltarImage";
-import CreateExample from '../DragCreate/CreateExample'
+import CreateExample from '../DragCreateDrop/CreateExample'
 
 export default function AltarForm(props) {
   return (
@@ -18,6 +18,7 @@ export default function AltarForm(props) {
           // onChange={handleChange}
         />
 
+        
         {/* Toggle Button */}
         <div className="toggle-button relative inline-block w-10 ml-8 align-middle select-none transition duration-200 ease-in">
           <label for="toggle" className="text-primary text-xs mb-10">
@@ -36,9 +37,11 @@ export default function AltarForm(props) {
           ></label>
         </div>
       </div>
+
+
       {/* Form for draggable saved images */}
 
-      <CreateExample />
+      <CreateExample user={props.user} altars={props.altars} images={props.images} />
       
       
     </>

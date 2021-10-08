@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { useDrop } from "react-dnd";
-import Box from "./Box.jsx";
+import ACBox from "./ACBox.jsx";
 import update from "immutability-helper";
 import AltarImage from "../AltarImage/AltarImage";
 const styles = {
@@ -9,7 +9,7 @@ const styles = {
   // border: "5px solid white",
   position: "relative",
 };
-export const DragContainer = ({ hideSourceOnDrag }) => {
+export const ACContainer = ({ hideSourceOnDrag }) => {
   const [boxes, setBoxes] = useState({
     // this data can hold anything that is relevant
     // for creating the draggable elements later.
@@ -22,19 +22,7 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     e: { top: 300, left: 275, imageType: 3 },
     f: { top: 100, left: 550, imageType: 9 },
     g: { top: 200, left: 590, imageType: 12 },
-    h: { top: 175, left: 125, imageType: 4 },
-    i: { top: 350, left: 325, imageType: 15 },
-    j: { top: 350, left: 100, imageType: 14 },
-    k: { top: 250, left: 525, imageType: 11 },
-    l: { top: 355, left: 455, imageType: 10 },
-    m: { top: 185, left: 750, imageType: 17 },
-    n: { top: 425, left: 845, imageType: 16 },
-    o: { top: 350, left: 220, imageType: 18 },
-    p: { top: 425, left: 330, imageType: 5 },
-    q: { top: 475, left: 175, imageType: 8 },
-    r: { top: 250, left: 385, imageType: 13 },
-    s: { top: 180, left: 45, imageType: 2 },
-    
+
 
 
   });
@@ -78,7 +66,7 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
           // we can the contents of this box component to an altarimage so
           // that we are dragging images
           // around instead of text.
-          <Box
+          <ACBox
             key={key}
             id={key}
             left={box.left}
@@ -88,7 +76,7 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
             <AltarImage imageType={box.imageType}/>
             {/* we can put anything we want in here, like altarimages */}
             {box.title}
-          </Box>
+          </ACBox>
         );
       })}
     </div>
