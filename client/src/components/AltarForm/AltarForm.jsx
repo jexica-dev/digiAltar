@@ -1,8 +1,10 @@
 import { React } from "react";
 import "./AltarForm.css";
 import AltarCard from "../AltarCard/AltarCard";
-import AltarImage from "../AltarImage/AltarImage";
+// import AltarImage from "../AltarImage/AltarImage";
 import CreateExample from '../DragCreateDrop/CreateExample'
+import Button from "../Button/Button";
+
 
 export default function AltarForm(props) {
   return (
@@ -35,6 +37,12 @@ export default function AltarForm(props) {
             for="toggle"
             className="toggle-label block overflow-hidden h-6 rounded-full bg-secondary cursor-pointer"
           ></label>
+        </div>
+        <div className="ml-10">
+          <Button>download</Button>
+        </div>
+        <div className="ml-4">
+          <Button>save</Button>
         </div>
       </div>
 
