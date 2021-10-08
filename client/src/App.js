@@ -1,4 +1,6 @@
 import "./App.css";
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router";
 import Login from "./screens/Login/Login";
@@ -43,6 +45,7 @@ function App() {
 
   return (
     <div className="App">
+      <DndProvider backend={HTML5Backend}>
       <Layout user={currentUser} />
       <Switch>
         <Route path="/login">
@@ -56,6 +59,7 @@ function App() {
           <Main user={currentUser} handleLogout={handleLogout}/>
         </Route>
       </Switch>
+      </DndProvider>
     </div>
   );
 }

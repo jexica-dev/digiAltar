@@ -10301,3 +10301,235 @@ Completed 200 OK in 344ms (Views: 338.0ms | ActiveRecord: 230.3ms | Allocations:
 Completed 200 OK in 445ms (Views: 0.3ms | ActiveRecord: 242.8ms | Allocations: 9828)
 
 
+Started GET "/auth/verify" for ::1 at 2021-10-07 21:55:18 -0400
+Started GET "/altars" for ::1 at 2021-10-07 21:55:18 -0400
+Started GET "/images" for ::1 at 2021-10-07 21:55:18 -0400
+  [1m[35m (30.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (21.6ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mAltar Load (22.7ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 151ms (Views: 3.1ms | ActiveRecord: 104.1ms | Allocations: 16417)
+
+
+Completed 200 OK in 137ms (Views: 56.2ms | ActiveRecord: 65.4ms | Allocations: 19632)
+
+
+Completed 200 OK in 123ms (Views: 60.0ms | ActiveRecord: 61.7ms | Allocations: 18543)
+
+
+Started GET "/auth/verify" for ::1 at 2021-10-07 21:55:56 -0400
+Started GET "/altars" for ::1 at 2021-10-07 21:55:57 -0400
+Started GET "/images" for ::1 at 2021-10-07 21:55:57 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (11.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  [1m[36mImage Load (21.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 139ms (Views: 122.9ms | ActiveRecord: 11.2ms | Allocations: 1534)
+
+
+Completed 200 OK in 137ms (Views: 115.3ms | ActiveRecord: 21.1ms | Allocations: 2226)
+
+
+  [1m[36mUser Load (45.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 210ms (Views: 0.2ms | ActiveRecord: 52.7ms | Allocations: 3741)
+
+
+Started GET "/altars" for ::1 at 2021-10-07 21:58:39 -0400
+Started GET "/images" for ::1 at 2021-10-07 21:58:39 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (138.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 516ms (Views: 353.8ms | ActiveRecord: 138.9ms | Allocations: 1069)
+
+
+  [1m[36mAltar Load (122.1ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 561ms (Views: 430.4ms | ActiveRecord: 122.1ms | Allocations: 2403)
+
+
+Started GET "/altars" for ::1 at 2021-10-07 21:58:52 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-07 21:58:52 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (0.9ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.9ms | Allocations: 1757)
+
+
+  [1m[36mImage Load (45.0ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 129ms (Views: 82.1ms | ActiveRecord: 45.0ms | Allocations: 2339)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-07 21:58:53 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 12.2ms | Allocations: 1279)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-07 21:58:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms | Allocations: 1065)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-07 21:58:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1064)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-07 21:58:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms | Allocations: 1065)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-07 21:58:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 1064)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-07 21:58:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1064)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-07 21:59:00 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 1065)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-07 21:59:05 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 295ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 883)
+
+
+Started GET "/altars" for ::1 at 2021-10-07 21:59:06 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-07 21:59:06 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+  [1m[36mAltar Load (26.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 33ms (Views: 5.3ms | ActiveRecord: 26.4ms | Allocations: 2641)
+
+
+Started GET "/auth/verify" for ::1 at 2021-10-07 22:43:51 -0400
+Started GET "/images" for ::1 at 2021-10-07 22:43:51 -0400
+Started GET "/altars" for ::1 at 2021-10-07 22:43:51 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mAltar Load (242.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  [1m[36mImage Load (252.0ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mUser Load (131.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2089ms (Views: 6.6ms | ActiveRecord: 1272.8ms | Allocations: 8105)
+
+
+Completed 200 OK in 1931ms (Views: 1857.3ms | ActiveRecord: 1552.1ms | Allocations: 8310)
+
+
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 1757ms (Views: 1749.7ms | ActiveRecord: 1425.9ms | Allocations: 8896)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-07 22:43:56 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.8ms | Allocations: 1091)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-07 22:44:00 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 295ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 818)
+
+
+Started GET "/altars" for ::1 at 2021-10-07 22:44:01 -0400
+Processing by AltarsController#index as HTML
+  [1m[36mAltar Load (0.5ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.5ms | Allocations: 1419)
+
+
+Started GET "/images" for ::1 at 2021-10-07 22:44:01 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 12.7ms | ActiveRecord: 0.7ms | Allocations: 921)
+
+

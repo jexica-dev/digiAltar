@@ -1,8 +1,8 @@
 import { useDrop } from 'react-dnd';
 import { ItemTypes } from '../DragMain/ItemTypes';
 const style = {
-    height: '12rem',
-    width: '12rem',
+    height: '20rem',
+    width: '30rem',
     marginRight: '1.5rem',
     marginBottom: '1.5rem',
     color: 'white',
@@ -27,7 +27,7 @@ export const CreateDrop = () => {
         backgroundColor = 'yellow';
     }
     else if (canDrop) {
-        backgroundColor = 'darkkhaki';
+        backgroundColor = '#9395ff';
     }
     return (<div ref={drop} role={'Altar'} style={{ ...style, backgroundColor }}>
 			{isActive ? 'Release to drop' : 'Drag a box here'}

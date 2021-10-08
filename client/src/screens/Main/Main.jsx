@@ -7,7 +7,7 @@ import About from "../About/About.jsx";
 import UserAltars from "../UserAltars/UserAltars";
 import AltarEdit from "../AltarEdit/AltarEdit";
 import { useParams } from 'react-router';
-import DragApp from "../../components/Drag/DragApp";
+import { DragExample } from "../../components/DragMain/DragExample";
 
 
 export default function Main(props) {
@@ -52,7 +52,7 @@ export default function Main(props) {
           <About />
         </Route>
         <Route path="/" exact>
-          <DragApp className="z-0" />
+        <DragExample />
         </Route>
       </Switch>
     </div>
