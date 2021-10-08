@@ -5,10 +5,13 @@ import { ACExample } from "../DragAltarCard/ACExample";
 
 export default function CreateDrop(props) {
   const style = {
-    // padding: ".5rem",
+
+    padding: ".5rem",
+    paddingTop: "1.75rem",
     textAlign: "center",
     lineHeight: "normal",
     float: "bottom",
+    color: 'black'
   };
   const parentDiv = useRef();
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
@@ -30,7 +33,7 @@ export default function CreateDrop(props) {
     }),
   }));
   const isActive = canDrop && isOver;
-  let backgroundColor = "black";
+  let backgroundColor = "yellow";
   if (isActive) {
     backgroundColor = "#9395ff";
   } else if (canDrop) {
@@ -46,12 +49,12 @@ export default function CreateDrop(props) {
         </>
         <>
         <div
-          className="w-full h-full text-primary"
+          className="w-full h-96 text-primary"
           ref={drop}
           role={"Altar"}
           style={{ ...style, backgroundColor }}
         >
-          {/* {isActive ? "release to drop" : ""} */}
+          {isActive ? "release to drop" : <><p className="mb-8 leading-6"><b>drop in here </b>to add to your divine crypto sacred art shrine</p></>}
           <>
             {/* DragAltarCard: ACExample Here */}
             
