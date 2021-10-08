@@ -21,7 +21,7 @@ export const CreateContainer = memo(function CreateContainer(props) {
 
         </div>
 
-        <div className=" mt-4 w-20 h-96 clear-both overflow-hidden">
+        <div className=" mt-4 w-24 h-96 clear-both overflow-hidden">
             <CreateDrop user={props.user} altars={props.altars} images={props.images}/>
             </div>
 

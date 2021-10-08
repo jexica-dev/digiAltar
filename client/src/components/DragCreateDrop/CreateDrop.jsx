@@ -54,7 +54,7 @@ export default function CreateDrop(props) {
           role={"Altar"}
           style={{ ...style, backgroundColor }}
         >
-          {isActive ? "release to drop" : <><p className="mb-8 leading-6"><b>drop in here </b>to add to your divine crypto sacred art shrine</p></>}
+          {isActive ? "release to drop" : <><p className="mb-8 leading-6"><b>drop <br /> in here</b> to add to your divine crypto sacred art shrine</p></>}
           <>
             {/* DragAltarCard: ACExample Here */}
             

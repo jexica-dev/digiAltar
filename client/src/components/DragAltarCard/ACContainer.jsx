@@ -11,17 +11,18 @@ const styles = {
 };
 export const ACContainer = ({ hideSourceOnDrag }) => {
   const [boxes, setBoxes] = useState({
-    // this data can hold anything that is relevant
-    // for creating the draggable elements later.
-    // you can store an image ID to pass into altarimages here for example.
 
-    a: { top: 455, left: 425, imageType: 7 },
-    b: { top: 75, left: 175, imageType: 6 },
-    c: { top: 20, left: 80, imageType: 1 },
-    d: { top: 195, left: 225, imageType: 19 },
-    e: { top: 300, left: 275, imageType: 3 },
-    f: { top: 100, left: 550, imageType: 9 },
-    g: { top: 200, left: 590, imageType: 12 },
+    // We'll be adding here the altar images
+    // of selected Altar
+
+    // we need to map through the altar and the images 
+    // to get the images top and left locations of selected Altar
+    // 
+
+    a: { top: 220, left: 460, imageType: 7 },
+    c: { top: 20, left: 50, imageType: 1 },
+    b: { top: 20, left: 100, imageType: 4 },
+  
 
 
 
@@ -66,17 +67,25 @@ export const ACContainer = ({ hideSourceOnDrag }) => {
           // we can the contents of this box component to an altarimage so
           // that we are dragging images
           // around instead of text.
+          <>
+
+
+            {/* We will make the DoubleClick the Delete functionality */}
+          <button onDoubleClick={() => window.alert('Doubleclick will delete!')}>
           <ACBox
             key={key}
             id={key}
             left={box.left}
             top={box.top}
             hideSourceOnDrag={hideSourceOnDrag}
+            
           > 
-            <AltarImage imageType={box.imageType}/>
+            <AltarImage imageType={box.imageType} />
             {/* we can put anything we want in here, like altarimages */}
-            {box.title}
-          </ACBox>
+            
+      </ACBox>
+      </button>
+      </>
         );
       })}
     </div>
