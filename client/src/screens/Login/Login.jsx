@@ -25,8 +25,7 @@ export default function Login(props) {
     e.preventDefault();
     let status = props.handleLogin(formData);
     if (status) {
-      setTimeout(() =>{setErrorStatus(true);}, 500)
-      
+      setTimeout(() =>{setErrorStatus(true)}, 500)
     }
   };
 
