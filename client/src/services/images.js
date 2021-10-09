@@ -1,10 +1,12 @@
 import api from "./api_config";
 
+
+
+
 export const getAllImages = async () => {
   const res = await api.get('/images');
   return res.data;
 }
-
 
 
 export const getImage = async (id) => {

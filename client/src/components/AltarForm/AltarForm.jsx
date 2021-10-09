@@ -7,6 +7,9 @@ import Button from "../Button/Button";
 
 
 export default function AltarForm(props) {
+
+    
+
   return (
     <>
       <div className="flex ml-8 mt-32 justify-left w-screen">

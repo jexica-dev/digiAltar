@@ -16,14 +16,13 @@ export const CreateContainer = memo(function CreateContainer(props) {
         {/* Left Box below */}
 
         <div className="clear-both overflow-hidden create-altar-container mt-4 ml-8 w-1/2 h-96 justify-left border border-primary">
+          <p className="ml-2 text-left text-sm text-primary -mb-10"> doubleclick to delete</p>
           {/* <AltarCard setToggleFetch={props.setToggleFetch} user={props.user} images={props.images} altar={props.altar} /> */}
           <ACExample />
 
         </div>
 
-        <div className=" mt-4 w-24 h-96 clear-both overflow-hidden">
-            <CreateDrop user={props.user} altars={props.altars} images={props.images}/>
-            </div>
+    
 
         {/* Right Box below*/}
         <div className=" altar-image-container mt-4 mr-8 w-1/2 h-96 justify-right border border-primary z-10">
@@ -47,13 +46,13 @@ export const CreateContainer = memo(function CreateContainer(props) {
             <CreateBox imageType={19} />
             <CreateBox imageType={5} />
             <CreateBox imageType={9} />
+            <CreateBox imageType={20} />
             <CreateBox imageType={14} />
             <CreateBox imageType={11} />
             <CreateBox imageType={10} />
-            <CreateBox imageType={8} />
-            <CreateBox imageType={12} />
             <CreateBox imageType={13} />
-            <CreateBox imageType={15} />
+            <CreateBox imageType={12} />
+            <CreateBox imageType={8} />
             <CreateBox imageType={3} />
             <CreateBox imageType={17} />
             <CreateBox imageType={16} /> 

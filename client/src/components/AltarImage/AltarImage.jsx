@@ -29,7 +29,7 @@ export default function AltarImage(props) {
       ) : null}
 
       {props.imageType === 7 ? (
-        <img  className="w-34" src="https://i.imgur.com/JBfJOkL.png" alt="led2" />
+        <img  className="w-44" src="https://i.imgur.com/MVdrXT9.png" alt="led2" />
       ) : null}
 
       {props.imageType === 8 ? (
@@ -78,12 +78,36 @@ export default function AltarImage(props) {
       ) : null}
 
       {props.imageType === 19 ? (
-        <img className="w-36" src="https://i.imgur.com/f0A81Bs.png" alt="candle3" />
+        <img className="w-36" src="https://i.imgur.com/f0A81Bs.png" alt="candleholder" />
       ) : null}
 
+      {props.imageType === 20 ? (
+        <img className="w-36" src="https://i.imgur.com/s9l4lQH.png" alt="medicinewheel" />
+      ) : null}
 
+      {props.imageType === 21 ? (
+        <img className="w-16" src="https://i.imgur.com/yDk2ljO.png" alt="salt" />
+      ) : null}
 
+      {props.imageType === 22 ? (
+        <img className="w-24" src="https://i.imgur.com/zj86Arn.png" alt="pyramid" />
+      ) : null}
 
+      {props.imageType === 23 ? (
+        <img className="w-32" src="https://i.imgur.com/YYE0doj.png" alt="flowercandles" />
+      ) : null}
+
+      {props.imageType === 24 ? (
+        <img className="w-32" src="https://i.imgur.com/7Orii6Q.png" alt="plantinpot" />
+      ) : null}
+
+      {props.imageType === 25 ? (
+        <img className="w-44" src="https://i.imgur.com/tpOEPdX.png" alt="fruitbasket" />
+      ) : null}
+
+      {props.imageType === 26 ? (
+        <img className="w-24" src="https://i.imgur.com/vluZCWU.png" alt="calavera2" />
+      ) : null}
     </div>
   );
 }
