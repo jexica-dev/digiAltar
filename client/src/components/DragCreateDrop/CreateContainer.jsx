@@ -37,7 +37,7 @@ export const CreateContainer = memo(function CreateContainer(props) {
             {/* <AltarImage imageType={props.imageType} /> */}
             
 
-            <CreateBox top="3px" left="100px" imageType={6} />
+            <CreateBox top="3px" left="100px" imageType={25} />
             <CreateBox imageType={18} />
             <CreateBox imageType={1} />
             <CreateBox imageType={7} />

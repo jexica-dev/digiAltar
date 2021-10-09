@@ -23,12 +23,12 @@ export const createImage = async (image) => {
   return res.data;
 };
 
-export const updateAltar = async (id, image) => {
+export const updateImage = async (id, image) => {
   const res = await api.put(`/images/${id}`, image);
   return res.data;
 };
 
-export const deleteAltar = async (id) => {
-  const res = await api.delete(`/altars/${id}`);
+export const deleteImage = async (id) => {
+  const res = await api.delete(`/images/${id}`);
   return res.data;
 };
