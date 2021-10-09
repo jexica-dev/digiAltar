@@ -11,16 +11,16 @@ const style = {
   // width: "auto",
 };
 
-export const CreateBox = function CreateBox({ imageType }) {
+export const CreateBox = function CreateBox(props) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "box",
-    item: { imageType },
+    item: { imageType: props.imageType },
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult();
       const newPlace = monitor.getClientOffset();
       if (item && dropResult) {
-        // alert(`CreateHandle toggled to add image: ${imageType} into ${dropResult.name} at ${newPlace}`);
-        // alert(`CreateHandle toggled to add image: ${imageType} at ${newPlace}`);
+        // alert(`CreateHandle toggled to add image: ${props.imageType} into ${dropResult.name} at ${newPlace}`);
+        // alert(`CreateHandle toggled to add image: ${props.imageType} at ${newPlace}`);
       }
     },
     collect: (monitor) => ({
@@ -34,9 +34,11 @@ export const CreateBox = function CreateBox({ imageType }) {
       ref={drag}
       role="Box"
       style={{ ...style, opacity }}
-      data-testid={`box-${imageType}`}
+      data-testid={`box-${props.imageType}`}
+      className="absolute"
+      style={{top: props.top, left: props.left}}
     >
-      <AltarImage imageType={imageType} />
+      <AltarImage imageType={props.imageType} />
     </div>
   );
 };

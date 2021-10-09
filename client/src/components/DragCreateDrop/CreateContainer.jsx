@@ -31,13 +31,13 @@ export const CreateContainer = memo(function CreateContainer(props) {
             {"<<"} drag to drop
           </p>
           
-          <div className=" mt-4 clear-both overflow-hidden w-full -mb-8 h-96 ">
+          <div className="relative mt-4 clear-both overflow-hidden w-full -mb-8 h-96 ">
             {/* These are the images that you can add to your altar */}
 
             {/* <AltarImage imageType={props.imageType} /> */}
             
 
-            <CreateBox imageType={6} />
+            <CreateBox top="3px" left="100px" imageType={6} />
             <CreateBox imageType={18} />
             <CreateBox imageType={1} />
             <CreateBox imageType={7} />
