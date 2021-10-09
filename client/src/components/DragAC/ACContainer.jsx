@@ -4,34 +4,35 @@ import ACBox from "./ACBox.jsx";
 import update from "immutability-helper";
 import AltarImage from "../AltarImage/AltarImage";
 
-
-
 const styles = {
   width: "100vw",
   height: "100vh",
-  // border: "5px solid white",
   position: "relative",
 };
-export const ACContainer = ({ hideSourceOnDrag, dragDisabled }) => {
+
+export const ACContainer = ({
+  hideSourceOnDrag,
+  dragDisabled,
+  altar,
+  images,
+}) => {
   const containerDiv = useRef();
-  const [boxes, setBoxes] = useState({
-    // We'll be adding here the altar images
-    // of selected Altar
 
-    // we need to map through the altar and the images
-    // to get the images top and left locations of selected Altar
-    //
+  const dragImages = images.reduce((acc, image) => {
+    if (image.altar_id === altar.id) {
+      acc[image.id] = {
+        top: parseFloat(image.top),
+        left: parseFloat(image.left),
+        imageType: image.image_type,
+      };
+    }
+    return acc;
+  }, {});
 
-    a: { top: 220, left: 460, imageType: 7 },
-    c: { top: 20, left: 50, imageType: 1 },
-    b: { top: 150, left: 90, imageType: 4 },
+  const [boxes, setBoxes] = useState(dragImages);
 
-
-  });
   const moveBox = useCallback(
     (id, left, top, imageType) => {
-      console.log(boxes);
-      console.log(id);
       if (!id) {
         id = "" + Math.random();
         setBoxes({
@@ -69,11 +70,10 @@ export const ACContainer = ({ hideSourceOnDrag, dragDisabled }) => {
         let y = offset.y;
         x -= containerDiv.current.getBoundingClientRect().left;
         y -= containerDiv.current.getBoundingClientRect().top;
-        
+
         if (item.id) {
           moveBox(item.id, left, top);
-        }
-        else {
+        } else {
           moveBox(null, x, y, item.imageType);
         }
 
@@ -85,7 +85,6 @@ export const ACContainer = ({ hideSourceOnDrag, dragDisabled }) => {
   return (
     <div ref={drop} style={styles}>
       <div ref={containerDiv} className="w-full h-full">
-        {/* {props.altars.name} */}
         {Object.keys(boxes).map((key) => {
           // remember this is a deconstruction
           // which means we are pulling variables out of the

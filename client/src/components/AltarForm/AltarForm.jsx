@@ -8,7 +8,10 @@ import Button from "../Button/Button";
 
 export default function AltarForm(props) {
 
-    
+// make an onchange={} infoHandle to prepopulate the name and the privacy(false) setting.
+
+// make a onSubmit={} submitHandle to update the name and the privacy setting.  
+
 
   return (
     <>
@@ -52,7 +55,7 @@ export default function AltarForm(props) {
 
       {/* Form for draggable saved images */}
 
-      <CreateExample user={props.user} altars={props.altars} images={props.images} />
+      <CreateExample altar={props.altar} images={props.images} />
       
       
     </>

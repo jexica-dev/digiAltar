@@ -5,7 +5,7 @@ export const ACExample = (props) => {
     const [hideSourceOnDrag, setHideSourceOnDrag] = useState(true);
     const toggle = useCallback(() => setHideSourceOnDrag(!hideSourceOnDrag), [hideSourceOnDrag]);
     return (<div>
-      <ACContainer hideSourceOnDrag={hideSourceOnDrag} dragDisabled={props.dragDisabled}/>
+      <ACContainer altar={props.altar} images={props.images} hideSourceOnDrag={hideSourceOnDrag} dragDisabled={props.dragDisabled}/>
 
 		</div>);
 };

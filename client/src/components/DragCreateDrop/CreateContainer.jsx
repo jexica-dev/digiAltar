@@ -1,12 +1,12 @@
-import { memo } from "react";
-import CreateDrop from "./CreateDrop";
+import React from 'react'
 import { CreateBox } from "./CreateBox";
-import { ACExample } from "../DragAltarCard/ACExample";
-import AltarImage from "../AltarImage/AltarImage";
+import { ACExample } from "../DragAC/ACExample";
 
 
 
-export const CreateContainer = memo(function CreateContainer(props) {
+export default function CreateContainer(props) {
+
+
   return (
     <>
  
@@ -18,7 +18,7 @@ export const CreateContainer = memo(function CreateContainer(props) {
         <div className="clear-both overflow-hidden create-altar-container mt-4 ml-8 w-1/2 h-96 justify-left border border-primary">
           <p className="ml-2 text-left text-sm text-primary -mb-10"> doubleclick to delete</p>
           {/* <AltarCard setToggleFetch={props.setToggleFetch} user={props.user} images={props.images} altar={props.altar} /> */}
-          <ACExample />
+          <ACExample altar={props.altar} images={props.images} />
 
         </div>
 
@@ -62,4 +62,4 @@ export const CreateContainer = memo(function CreateContainer(props) {
       </div>
     </>
   );
-});
+};
