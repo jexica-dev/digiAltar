@@ -15859,3 +15859,910 @@ Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.4ms | Allocations: 130
 Completed 200 OK in 60ms (Views: 47.4ms | ActiveRecord: 7.2ms | Allocations: 3215)
 
 
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:38:54 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:38:54 -0400
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:38:54 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 2.4ms | Allocations: 225)
+
+
+  [1m[36mAltar Load (37.1ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  [1m[36mImage Load (37.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 571ms (Views: 559.1ms | ActiveRecord: 226.0ms | Allocations: 7848)
+
+
+Completed 200 OK in 478ms (Views: 477.6ms | ActiveRecord: 216.9ms | Allocations: 5499)
+
+
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:39:03 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:39:03 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:39:03 -0400
+Processing by AltarsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Processing by ImagesController#index as HTML
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 427)
+
+
+  [1m[36mAltar Load (1.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.4ms | Allocations: 1980)
+
+
+  [1m[36mImage Load (3.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 3.9ms | Allocations: 3363)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:39:18 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:39:18 -0400
+Processing by AltarsController#index as HTML
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:39:18 -0400
+Processing by ImagesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+  [1m[36mAltar Load (21.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  [1m[36mImage Load (31.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+Completed 200 OK in 106ms (Views: 82.5ms | ActiveRecord: 21.4ms | Allocations: 2205)
+
+
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 103ms (Views: 71.0ms | ActiveRecord: 31.9ms | Allocations: 3660)
+
+
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:39:33 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:39:33 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:39:33 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AltarsController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Processing by ImagesController#index as HTML
+Completed 401 Unauthorized in 10ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 515)
+
+
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mAltar Load (0.8ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 83ms (Views: 80.2ms | ActiveRecord: 1.3ms | Allocations: 2524)
+
+
+Completed 200 OK in 104ms (Views: 102.5ms | ActiveRecord: 0.8ms | Allocations: 3311)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:39:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 14.2ms | Allocations: 1135)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:41:13 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:41:14 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:41:27 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:43:10 -0400
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:43:10 -0400
+  [1m[35m (45.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 401 Unauthorized in 10ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 536)
+
+
+  [1m[36mUser Load (41.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 88.2ms | Allocations: 9762)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:43:15 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:43:15 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (50.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  [1m[36mImage Load (45.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 480ms (Views: 15.1ms | ActiveRecord: 453.9ms | Allocations: 12485)
+
+
+Completed 200 OK in 459ms (Views: 17.8ms | ActiveRecord: 439.1ms | Allocations: 7859)
+
+
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:43:29 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:43:29 -0400
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:43:29 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 228)
+
+
+  [1m[36mAltar Load (181.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 351ms (Views: 163.9ms | ActiveRecord: 181.4ms | Allocations: 2197)
+
+
+  [1m[36mImage Load (225.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 360ms (Views: 134.8ms | ActiveRecord: 225.2ms | Allocations: 3912)
+
+
+Started GET "/images" for ::1 at 2021-10-09 15:46:33 -0400
+Processing by ImagesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-10-09 15:46:33 -0400
+Started GET "/altars" for ::1 at 2021-10-09 15:46:33 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (2.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 93ms (Views: 88.0ms | ActiveRecord: 2.3ms | Allocations: 3431)
+
+
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 189ms (Views: 0.7ms | ActiveRecord: 130.2ms | Allocations: 5796)
+
+
+  [1m[36mAltar Load (5.8ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 220ms (Views: 133.7ms | ActiveRecord: 85.8ms | Allocations: 8660)
+
+
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:46:59 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:46:59 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:46:59 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 60ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 245)
+
+
+  [1m[36mImage Load (61.0ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 98ms (Views: 37.3ms | ActiveRecord: 61.0ms | Allocations: 2704)
+
+
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 183ms (Views: 181.9ms | ActiveRecord: 0.4ms | Allocations: 4375)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:47:35 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:47:35 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mAltar Load (3.6ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 1896)
+
+
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 3.6ms | Allocations: 3065)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:47:37 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 10.2ms | Allocations: 1093)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:47:42 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 1064)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:47:59 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:47:59 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 1880)
+
+
+  [1m[36mAltar Load (5.7ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 5.7ms | Allocations: 3308)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:48:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 1066)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:48:12 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:48:12 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (1.7ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.7ms | Allocations: 1680)
+
+
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.9ms | Allocations: 3139)
+
+
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:50:54 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:50:54 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mAltar Load (0.8ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.8ms | Allocations: 1197)
+
+
+  [1m[36mImage Load (9.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 67ms (Views: 55.4ms | ActiveRecord: 9.5ms | Allocations: 3321)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:50:58 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.1ms | Allocations: 1069)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:52:34 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 332ms (Views: 1.8ms | ActiveRecord: 8.6ms | Allocations: 885)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:52:34 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:52:34 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (9.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 5.2ms | ActiveRecord: 9.3ms | Allocations: 1707)
+
+
+  [1m[36mImage Load (41.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 7.9ms | ActiveRecord: 41.4ms | Allocations: 3215)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:52:47 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 309ms (Views: 0.5ms | ActiveRecord: 5.4ms | Allocations: 652)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:52:55 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:52:55 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (4.6ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 4.6ms | Allocations: 1687)
+
+
+  [1m[36mImage Load (12.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 15.6ms | ActiveRecord: 12.1ms | Allocations: 3159)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:52:58 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:52:58 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (0.6ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.6ms | Allocations: 1339)
+
+
+  [1m[36mImage Load (12.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 19.9ms | ActiveRecord: 12.1ms | Allocations: 3194)
+
+
+Started GET "/auth/verify" for ::1 at 2021-10-09 15:58:14 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (29.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 252ms (Views: 2.3ms | ActiveRecord: 92.5ms | Allocations: 2863)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:51 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 318ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 655)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:53 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 301ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 651)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:55 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 303ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 660)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:55 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:55 -0400
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:55 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+Completed 401 Unauthorized in 263ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 900)
+
+
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 260ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 655)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:55 -0400
+Processing by AuthenticationController#login as HTML
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:55 -0400
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 274ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1295)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:56 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 560ms (Views: 0.2ms | ActiveRecord: 17.9ms | Allocations: 7043)
+
+
+Completed 401 Unauthorized in 1103ms (Views: 0.1ms | ActiveRecord: 304.8ms | Allocations: 11564)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:57 -0400
+Completed 401 Unauthorized in 1096ms (Views: 0.1ms | ActiveRecord: 29.8ms | Allocations: 9318)
+
+
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 261ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 652)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 262ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 698)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:58:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 262ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 651)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:59:00 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 306ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 817)
+
+
+Started GET "/images" for 127.0.0.1 at 2021-10-09 15:59:01 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 15:59:01 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mAltar Load (0.9ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 1253)
+
+
+  [1m[36mImage Load (22.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 6.9ms | ActiveRecord: 22.5ms | Allocations: 3352)
+
+
+Started GET "/auth/verify" for ::1 at 2021-10-09 15:59:37 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (38.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 77ms (Views: 2.1ms | ActiveRecord: 38.0ms | Allocations: 746)
+
+
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 15:59:38 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 743)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:59:47 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 308ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 651)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:59:48 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 283ms (Views: 1.9ms | ActiveRecord: 1.6ms | Allocations: 654)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 15:59:49 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 401 Unauthorized in 314ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 651)
+
+
+Started GET "/auth/verify" for ::1 at 2021-10-09 16:00:04 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (31.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 110ms (Views: 1.4ms | ActiveRecord: 31.2ms | Allocations: 743)
+
+
+Started GET "/auth/verify" for ::1 at 2021-10-09 16:04:34 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (28.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 77ms (Views: 4.6ms | ActiveRecord: 28.3ms | Allocations: 743)
+
+
+Started GET "/auth/verify" for ::1 at 2021-10-09 16:06:57 -0400
+Started GET "/images" for ::1 at 2021-10-09 16:06:57 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/altars" for ::1 at 2021-10-09 16:06:57 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 121ms (Views: 0.4ms | ActiveRecord: 5.3ms | Allocations: 1815)
+
+
+  [1m[36mAltar Load (11.7ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  [1m[36mImage Load (11.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 502ms (Views: 298.2ms | ActiveRecord: 200.8ms | Allocations: 6319)
+
+
+Completed 200 OK in 564ms (Views: 360.3ms | ActiveRecord: 197.7ms | Allocations: 8084)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:35:13 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 503ms (ActiveRecord: 135.4ms | Allocations: 3127)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-10-09 16:35:31 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 7.3ms | Allocations: 1065)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started GET "/altars" for ::1 at 2021-10-09 16:38:54 -0400
+Started GET "/images" for ::1 at 2021-10-09 16:38:54 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (32.1ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 124ms (Views: 86.7ms | ActiveRecord: 32.1ms | Allocations: 1726)
+
+
+  [1m[36mImage Load (13.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 300ms (Views: 85.3ms | ActiveRecord: 214.0ms | Allocations: 5324)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:38:57 -0400
+Started GET "/images" for ::1 at 2021-10-09 16:38:57 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (3.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 3.2ms | Allocations: 1360)
+
+
+  [1m[36mImage Load (16.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 14.1ms | ActiveRecord: 16.7ms | Allocations: 3236)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:41:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 302ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 883)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:42:00 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-09 16:42:00 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (46.9ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 52ms (Views: 4.8ms | ActiveRecord: 46.9ms | Allocations: 1875)
+
+
+  [1m[36mImage Load (25.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 80ms (Views: 52.2ms | ActiveRecord: 25.2ms | Allocations: 3162)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:43:41 -0400
+Started GET "/images" for ::1 at 2021-10-09 16:43:41 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (52.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mAltar Load (51.1ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+Completed 200 OK in 144ms (Views: 87.5ms | ActiveRecord: 52.3ms | Allocations: 1899)
+
+
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 205ms (Views: 139.8ms | ActiveRecord: 51.1ms | Allocations: 3305)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:43:46 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-09 16:43:46 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (4.8ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 4.8ms | Allocations: 1486)
+
+
+  [1m[36mImage Load (1.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 1.8ms | Allocations: 3159)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:43:58 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 327ms (Views: 1.4ms | ActiveRecord: 23.1ms | Allocations: 877)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:43:59 -0400
+Started GET "/images" for ::1 at 2021-10-09 16:43:59 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (18.7ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 2.9ms | ActiveRecord: 18.7ms | Allocations: 1509)
+
+
+  [1m[36mImage Load (7.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 25.2ms | ActiveRecord: 7.9ms | Allocations: 3194)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:44:18 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 335ms (Views: 0.5ms | ActiveRecord: 23.1ms | Allocations: 905)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:44:18 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-09 16:44:18 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (1.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 1.2ms | Allocations: 1509)
+
+
+  [1m[36mImage Load (1.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 1.4ms | Allocations: 3159)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:44:36 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 369ms (Views: 0.4ms | ActiveRecord: 7.8ms | Allocations: 879)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:44:37 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-09 16:44:37 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (1.1ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.1ms | Allocations: 1844)
+
+
+  [1m[36mImage Load (1.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 1.5ms | Allocations: 3142)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:44:51 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 315ms (Views: 1.0ms | ActiveRecord: 8.5ms | Allocations: 878)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:44:52 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-09 16:44:52 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (4.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 4.2ms | Allocations: 1749)
+
+
+  [1m[36mImage Load (21.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 6.9ms | ActiveRecord: 21.8ms | Allocations: 3159)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:45:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 304ms (Views: 1.6ms | ActiveRecord: 9.1ms | Allocations: 878)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:45:57 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-09 16:45:57 -0400
+  [1m[36mAltar Load (2.8ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 2.8ms | Allocations: 1633)
+
+
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (7.0ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 45.3ms | ActiveRecord: 7.0ms | Allocations: 1891)
+
+
+Started GET "/images" for ::1 at 2021-10-09 16:47:40 -0400
+Started GET "/auth/verify" for ::1 at 2021-10-09 16:47:40 -0400
+Processing by ImagesController#index as HTML
+Started GET "/altars" for ::1 at 2021-10-09 16:47:40 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 190ms (Views: 174.0ms | ActiveRecord: 0.9ms | Allocations: 2744)
+
+
+  [1m[36mUser Load (54.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 384ms (Views: 0.2ms | ActiveRecord: 54.5ms | Allocations: 3405)
+
+
+  [1m[36mAltar Load (39.0ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 844ms (Views: 284.8ms | ActiveRecord: 558.9ms | Allocations: 6186)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:47:55 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 306ms (Views: 0.7ms | ActiveRecord: 23.2ms | Allocations: 904)
+
+
+Started GET "/images" for ::1 at 2021-10-09 16:47:55 -0400
+Processing by ImagesController#index as HTML
+Started GET "/altars" for ::1 at 2021-10-09 16:47:55 -0400
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (1.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.2ms | Allocations: 2385)
+
+
+  [1m[36mAltar Load (6.0ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 6.0ms | Allocations: 3186)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:49:22 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 17.7ms | Allocations: 1064)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started GET "/images" for ::1 at 2021-10-09 16:49:31 -0400
+Started GET "/altars" for ::1 at 2021-10-09 16:49:31 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (55.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 85ms (Views: 29.4ms | ActiveRecord: 55.2ms | Allocations: 2128)
+
+
+  [1m[36mAltar Load (22.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 127ms (Views: 100.3ms | ActiveRecord: 22.3ms | Allocations: 3198)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:49:37 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 309ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 877)
+
+
+Started GET "/images" for ::1 at 2021-10-09 16:49:37 -0400
+Started GET "/altars" for ::1 at 2021-10-09 16:49:37 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mAltar Load (8.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.3ms | Allocations: 2180)
+
+
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 19.8ms | ActiveRecord: 8.3ms | Allocations: 3199)
+
+
+Started POST "/auth/login" for ::1 at 2021-10-09 16:50:11 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]", "errorMsg"=>""}}
+[31mUnpermitted parameter: :errorMsg[0m
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :errorMsg[0m
+Completed 200 OK in 290ms (Views: 0.2ms | ActiveRecord: 8.5ms | Allocations: 877)
+
+
+Started GET "/altars" for ::1 at 2021-10-09 16:50:12 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for ::1 at 2021-10-09 16:50:12 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 1845)
+
+
+  [1m[36mAltar Load (10.0ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 2.8ms | ActiveRecord: 10.0ms | Allocations: 3687)
+
+

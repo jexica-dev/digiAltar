@@ -25,9 +25,13 @@ function App() {
   }, []);
 
   const handleLogin = async (loginData) => {
-    const userData = await loginUser(loginData);
-    setCurrentUser(userData);
-    history.push('/myaltars');
+    try {
+      const userData = await loginUser(loginData);
+      setCurrentUser(userData);
+      history.push('/myaltars');
+    } catch (error) {
+      return true ;
+    }
   };
 
   const handleRegister = async (registerData) => {

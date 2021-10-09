@@ -11,6 +11,8 @@ export default function Login(props) {
     password: "",
   });
 
+  const [errorStatus, setErrorStatus] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -21,14 +23,18 @@ export default function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.handleLogin(formData);
+    let status = props.handleLogin(formData);
+    if (status) {
+      setTimeout(() =>{setErrorStatus(true);}, 500)
+      
+    }
   };
 
   return (
     <>
       <LoginNav />
       <Headline>Welcome,</Headline>
-      <form className="signin-container" onClick={handleSubmit}>
+      <form className="signin-container" onSubmit={handleSubmit}>
         <ul>
           <li>
             <input
@@ -53,6 +59,9 @@ export default function Login(props) {
           <li className="text-right">
             <Button>sign in</Button>
           </li>
+          <div className="text-primary">
+            {errorStatus ? "Invalid login" : null}
+          </div>
         </ul>
       </form>
     </>

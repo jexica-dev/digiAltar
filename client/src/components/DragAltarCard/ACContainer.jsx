@@ -3,6 +3,9 @@ import { useDrop } from "react-dnd";
 import ACBox from "./ACBox.jsx";
 import update from "immutability-helper";
 import AltarImage from "../AltarImage/AltarImage";
+
+
+
 const styles = {
   width: "100vw",
   height: "100vh",
@@ -22,6 +25,8 @@ export const ACContainer = ({ hideSourceOnDrag, dragDisabled }) => {
     a: { top: 220, left: 460, imageType: 7 },
     c: { top: 20, left: 50, imageType: 1 },
     b: { top: 150, left: 90, imageType: 4 },
+
+
   });
   const moveBox = useCallback(
     (id, left, top, imageType) => {
@@ -80,6 +85,7 @@ export const ACContainer = ({ hideSourceOnDrag, dragDisabled }) => {
   return (
     <div ref={drop} style={styles}>
       <div ref={containerDiv} className="w-full h-full">
+        {/* {props.altars.name} */}
         {Object.keys(boxes).map((key) => {
           // remember this is a deconstruction
           // which means we are pulling variables out of the
