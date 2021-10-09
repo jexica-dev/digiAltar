@@ -22,7 +22,7 @@ puts "#{Altar.count} altars created"
 
 pp altar1
 
-@image1 = Image.create!(name: 'flower1', image_type: 1, top:'25', left:'35', altar_id: altar1.id)
+@image1 = Image.create!(image_type: 1, top:'25', left:'35', altar_id: altar1.id)
 @image2 = Image.create!(name: 'buddha1', img_url:'https://i.imgur.com/iRGDCuu.png', image_type: 2, top:'75', left:'15', altar_id: altar1.id)
 
 puts "#{Image.count} images created"

@@ -16964,3 +16964,909 @@ Completed 200 OK in 103ms (Views: 52.8ms | ActiveRecord: 36.8ms | Allocations: 3
 Completed 200 OK in 281ms (Views: 141.3ms | ActiveRecord: 139.2ms | Allocations: 4114)
 
 
+Started GET "/auth/verify" for ::1 at 2021-10-09 18:44:59 -0400
+Started GET "/altars" for ::1 at 2021-10-09 18:44:59 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/images" for ::1 at 2021-10-09 18:44:59 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 555ms (Views: 554.1ms | ActiveRecord: 405.9ms | Allocations: 7420)
+
+
+  [1m[36mUser Load (21.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mAltar Load (22.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 579ms (Views: 577.7ms | ActiveRecord: 443.0ms | Allocations: 9692)
+
+
+Completed 200 OK in 591ms (Views: 0.2ms | ActiveRecord: 415.7ms | Allocations: 10607)
+
+
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mImage Load (1.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (6.9ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.3ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (12.1ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (1.8ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.4ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.2ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 28]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.2ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 29]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.2ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 30]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.7ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 31]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.2ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 32]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAltar Load (5.0ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (4.1ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 140]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 154]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (1.4ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 158]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (0.9ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 159]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (2.4ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 160]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 163]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 40]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 41]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tina@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (9.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Tina"], ["email", "tina@email.com"], ["password_digest", "$2a$12$Kyjl9g4Ouu72VCnj5.ohuO6m2gM8WE99vv72ZEwG6JovEahz/zzca"], ["created_at", "2021-10-09 23:11:49.432940"], ["updated_at", "2021-10-09 23:11:49.432940"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Create (9.0ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cyberella Shrine"], ["user_id", 42], ["privacy", true], ["created_at", "2021-10-09 23:11:49.450138"], ["updated_at", "2021-10-09 23:11:49.450138"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Create (0.7ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Holy Techspec"], ["user_id", 42], ["privacy", false], ["created_at", "2021-10-09 23:11:49.462057"], ["updated_at", "2021-10-09 23:11:49.462057"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Create (0.7ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Hipnotic Sanctuary"], ["user_id", 42], ["privacy", false], ["created_at", "2021-10-09 23:11:49.465287"], ["updated_at", "2021-10-09 23:11:49.465287"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Create (0.5ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Crypto Spiritual"], ["user_id", 42], ["privacy", false], ["created_at", "2021-10-09 23:11:49.468440"], ["updated_at", "2021-10-09 23:11:49.468440"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "altars"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Load (0.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 166], ["LIMIT", 1]]
+  [1m[36mImage Create (0.6ms)[0m  [1m[32mINSERT INTO "images" ("name", "image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "flower1"], ["image_type", 1], ["top", "25"], ["left", "35"], ["altar_id", 166], ["created_at", "2021-10-09 23:11:49.477586"], ["updated_at", "2021-10-09 23:11:49.477586"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Load (0.6ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 166], ["LIMIT", 1]]
+  [1m[36mImage Create (0.6ms)[0m  [1m[32mINSERT INTO "images" ("name", "img_url", "image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "buddha1"], ["img_url", "https://i.imgur.com/iRGDCuu.png"], ["image_type", 2], ["top", "75"], ["left", "15"], ["altar_id", 166], ["created_at", "2021-10-09 23:11:49.483882"], ["updated_at", "2021-10-09 23:11:49.483882"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.4ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 33]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImage Destroy (0.2ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = $1[0m  [["id", 34]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAltar Load (0.5ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (0.7ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 164]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 165]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (2.0ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 166]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "altars" WHERE "altars"."id" = $1[0m  [["id", 167]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 42]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tina@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Tina"], ["email", "tina@email.com"], ["password_digest", "$2a$12$0FmS3/vEDJ4Qf2uWROipoOxZL08ydyPPsQJ1t58yvtMoJhSDWM9Gq"], ["created_at", "2021-10-09 23:12:25.697347"], ["updated_at", "2021-10-09 23:12:25.697347"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Create (1.1ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cyberella Shrine"], ["user_id", 43], ["privacy", true], ["created_at", "2021-10-09 23:12:25.721385"], ["updated_at", "2021-10-09 23:12:25.721385"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Create (0.2ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Holy Techspec"], ["user_id", 43], ["privacy", false], ["created_at", "2021-10-09 23:12:25.734589"], ["updated_at", "2021-10-09 23:12:25.734589"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Create (0.2ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Hipnotic Sanctuary"], ["user_id", 43], ["privacy", false], ["created_at", "2021-10-09 23:12:25.737004"], ["updated_at", "2021-10-09 23:12:25.737004"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Create (0.2ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Crypto Spiritual"], ["user_id", 43], ["privacy", false], ["created_at", "2021-10-09 23:12:25.739218"], ["updated_at", "2021-10-09 23:12:25.739218"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "altars"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Load (0.6ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  [1m[36mImage Create (0.5ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 1], ["top", "25"], ["left", "35"], ["altar_id", 170], ["created_at", "2021-10-09 23:12:25.746621"], ["updated_at", "2021-10-09 23:12:25.746621"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAltar Load (0.1ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  [1m[36mImage Create (0.3ms)[0m  [1m[32mINSERT INTO "images" ("name", "img_url", "image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "buddha1"], ["img_url", "https://i.imgur.com/iRGDCuu.png"], ["image_type", 2], ["top", "75"], ["left", "15"], ["altar_id", 170], ["created_at", "2021-10-09 23:12:25.750155"], ["updated_at", "2021-10-09 23:12:25.750155"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:28:55 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:28:55 -0400
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:28:56 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+  [1m[36mImage Load (7.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mAltar Load (12.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+Completed 200 OK in 266ms (Views: 214.4ms | ActiveRecord: 43.9ms | Allocations: 10060)
+
+
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 225ms (Views: 223.4ms | ActiveRecord: 47.2ms | Allocations: 12454)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 43ms (Views: 0.1ms | ActiveRecord: 22.2ms | Allocations: 2656)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-09 19:29:08 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Tina", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tina"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 312ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 3173)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:29:08 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:29:08 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (1.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  [1m[36mImage Load (7.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 10.4ms | Allocations: 6097)
+
+
+Completed 200 OK in 34ms (Views: 12.5ms | ActiveRecord: 19.9ms | Allocations: 9217)
+
+
+Started PUT "/images/36" for 127.0.0.1 at 2021-10-09 19:29:15 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>214, "top"=>75, "altar_id"=>170, "id"=>"36", "image"=>{"top"=>75, "left"=>214, "altar_id"=>170}}
+  [1m[36mImage Load (5.7ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (9.2ms)[0m  [1m[33mUPDATE "images" SET "left" = $1, "updated_at" = $2 WHERE "images"."id" = $3[0m  [["left", "214"], ["updated_at", "2021-10-09 23:29:15.200727"], ["id", 36]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 48ms (Views: 0.9ms | ActiveRecord: 16.4ms | Allocations: 5534)
+
+
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:29:18 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:29:18 -0400
+Processing by ImagesController#index as HTML
+Processing by AltarsController#index as HTML
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:29:18 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mImage Load (1.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mAltar Load (0.5ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 1.2ms | Allocations: 2543)
+
+
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.5ms | Allocations: 2587)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 452ms (Views: 0.4ms | ActiveRecord: 79.0ms | Allocations: 4983)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:36:28 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>639, "top"=>151, "image_type"=>25, "altar_id"=>170, "image"=>{"image_type"=>25, "top"=>151, "left"=>639, "altar_id"=>170}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (24.8ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (63.4ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 25], ["top", "151"], ["left", "639"], ["altar_id", 170], ["created_at", "2021-10-09 23:36:29.465900"], ["updated_at", "2021-10-09 23:36:29.465900"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (171.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 760ms (Views: 18.8ms | ActiveRecord: 373.3ms | Allocations: 5134)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:37:00 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>291, "top"=>329, "image_type"=>25, "altar_id"=>170, "image"=>{"image_type"=>25, "top"=>329, "left"=>291, "altar_id"=>170}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (13.7ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (3.8ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 25], ["top", "329"], ["left", "291"], ["altar_id", 170], ["created_at", "2021-10-09 23:37:00.826560"], ["updated_at", "2021-10-09 23:37:00.826560"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 75ms (Views: 8.6ms | ActiveRecord: 23.4ms | Allocations: 2809)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:37:02 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:37:02 -0400
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:37:02 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAltar Load (7.7ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 29ms (Views: 18.6ms | ActiveRecord: 7.7ms | Allocations: 1930)
+
+
+  [1m[36mImage Load (9.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 245ms (Views: 208.6ms | ActiveRecord: 34.8ms | Allocations: 6512)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 238ms (Views: 0.1ms | ActiveRecord: 50.0ms | Allocations: 7045)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:37:08 -0400
+Processing by AltarsController#index as HTML
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:37:08 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:37:08 -0400
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (4.9ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 4.9ms | Allocations: 1953)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2256)
+
+
+  [1m[36mImage Load (7.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 19.4ms | ActiveRecord: 7.4ms | Allocations: 3194)
+
+
+Started PUT "/images/38" for 127.0.0.1 at 2021-10-09 19:37:39 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>61, "top"=>226, "altar_id"=>170, "id"=>"38", "image"=>{"top"=>226, "left"=>61, "altar_id"=>170}}
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (6.3ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "226"], ["left", "61"], ["updated_at", "2021-10-09 23:37:39.928504"], ["id", 38]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 43ms (Views: 0.4ms | ActiveRecord: 12.7ms | Allocations: 3233)
+
+
+Started PUT "/images/38" for 127.0.0.1 at 2021-10-09 19:37:41 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>146, "top"=>230, "altar_id"=>170, "id"=>"38", "image"=>{"top"=>230, "left"=>146, "altar_id"=>170}}
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (5.8ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "230"], ["left", "146"], ["updated_at", "2021-10-09 23:37:41.269703"], ["id", 38]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 7.2ms | Allocations: 3224)
+
+
+Started PUT "/images/38" for 127.0.0.1 at 2021-10-09 19:37:41 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>224, "top"=>230, "altar_id"=>170, "id"=>"38", "image"=>{"top"=>230, "left"=>224, "altar_id"=>170}}
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.6ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (4.9ms)[0m  [1m[33mUPDATE "images" SET "left" = $1, "updated_at" = $2 WHERE "images"."id" = $3[0m  [["left", "224"], ["updated_at", "2021-10-09 23:37:41.869587"], ["id", 38]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 32ms (Views: 0.8ms | ActiveRecord: 6.6ms | Allocations: 3218)
+
+
+Started PUT "/images/36" for 127.0.0.1 at 2021-10-09 19:37:42 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>174, "top"=>72, "altar_id"=>170, "id"=>"36", "image"=>{"top"=>72, "left"=>174, "altar_id"=>170}}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (6.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (5.6ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "72"], ["left", "174"], ["updated_at", "2021-10-09 23:37:42.654463"], ["id", 36]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 36ms (Views: 5.2ms | ActiveRecord: 18.4ms | Allocations: 3240)
+
+
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:37:44 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:37:44 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:37:44 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mAltar Load (1.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.7ms | Allocations: 2103)
+
+
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 1.2ms | Allocations: 1634)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 3633)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:39:24 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:39:24 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:39:24 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mImage Load (0.6ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.6ms | Allocations: 1662)
+
+
+  [1m[36mAltar Load (30.9ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 65ms (Views: 28.4ms | ActiveRecord: 30.9ms | Allocations: 2929)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 76ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3188)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:39:26 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:39:26 -0400
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:39:26 -0400
+Processing by ImagesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.4ms | Allocations: 1667)
+
+
+  [1m[36mUser Load (35.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 40ms (Views: 0.3ms | ActiveRecord: 35.1ms | Allocations: 1966)
+
+
+  [1m[36mImage Load (1.6ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 1.6ms | Allocations: 3473)
+
+
+Started PUT "/images/38" for 127.0.0.1 at 2021-10-09 19:39:27 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>247, "top"=>160, "altar_id"=>170, "id"=>"38", "image"=>{"top"=>160, "left"=>247, "altar_id"=>170}}
+  [1m[36mImage Load (7.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (6.0ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "160"], ["left", "247"], ["updated_at", "2021-10-09 23:39:28.031362"], ["id", 38]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 13.8ms | Allocations: 3224)
+
+
+Started PUT "/images/38" for 127.0.0.1 at 2021-10-09 19:39:29 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>252, "top"=>149, "altar_id"=>170, "id"=>"38", "image"=>{"top"=>149, "left"=>252, "altar_id"=>170}}
+  [1m[36mImage Load (3.7ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (4.1ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "149"], ["left", "252"], ["updated_at", "2021-10-09 23:39:29.244877"], ["id", 38]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 8.6ms | Allocations: 3224)
+
+
+Started PUT "/images/38" for 127.0.0.1 at 2021-10-09 19:39:30 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>228, "top"=>86, "altar_id"=>170, "id"=>"38", "image"=>{"top"=>86, "left"=>228, "altar_id"=>170}}
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (7.9ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "86"], ["left", "228"], ["updated_at", "2021-10-09 23:39:30.496579"], ["id", 38]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 9.2ms | Allocations: 3224)
+
+
+Started PUT "/images/38" for 127.0.0.1 at 2021-10-09 19:39:32 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>67, "top"=>231, "altar_id"=>170, "id"=>"38", "image"=>{"top"=>231, "left"=>67, "altar_id"=>170}}
+  [1m[36mImage Load (0.6ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (8.7ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "231"], ["left", "67"], ["updated_at", "2021-10-09 23:39:32.108258"], ["id", 38]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 91ms (Views: 0.2ms | ActiveRecord: 10.0ms | Allocations: 3226)
+
+
+Started PUT "/images/38" for 127.0.0.1 at 2021-10-09 19:39:33 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>38, "top"=>233, "altar_id"=>170, "id"=>"38", "image"=>{"top"=>233, "left"=>38, "altar_id"=>170}}
+  [1m[36mImage Load (1.6ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (22.9ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "233"], ["left", "38"], ["updated_at", "2021-10-09 23:39:33.672929"], ["id", 38]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (21.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 90ms (Views: 0.6ms | ActiveRecord: 46.7ms | Allocations: 3230)
+
+
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:40:12 -0400
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:40:12 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:40:12 -0400
+Processing by AltarsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (0.6ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.6ms | Allocations: 1432)
+
+
+  [1m[36mImage Load (23.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 77ms (Views: 53.8ms | ActiveRecord: 23.2ms | Allocations: 2321)
+
+
+  [1m[36mUser Load (48.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 81ms (Views: 0.2ms | ActiveRecord: 48.0ms | Allocations: 3476)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:40:14 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>404, "top"=>136, "image_type"=>16, "altar_id"=>170, "image"=>{"image_type"=>16, "top"=>136, "left"=>404, "altar_id"=>170}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (22.2ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 16], ["top", "136"], ["left", "404"], ["altar_id", 170], ["created_at", "2021-10-09 23:40:14.252085"], ["updated_at", "2021-10-09 23:40:14.252085"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 60ms (Views: 3.6ms | ActiveRecord: 35.6ms | Allocations: 2809)
+
+
+Started PUT "/images/36" for 127.0.0.1 at 2021-10-09 19:40:15 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>211, "top"=>86, "altar_id"=>170, "id"=>"36", "image"=>{"top"=>86, "left"=>211, "altar_id"=>170}}
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (1.3ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "86"], ["left", "211"], ["updated_at", "2021-10-09 23:40:15.386584"], ["id", 36]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 32ms (Views: 0.6ms | ActiveRecord: 3.1ms | Allocations: 3242)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:40:16 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:40:16 -0400
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:40:16 -0400
+Processing by AltarsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 2090)
+
+
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.8ms | Allocations: 2543)
+
+
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2954)
+
+
+Started PUT "/images/39" for 127.0.0.1 at 2021-10-09 19:40:18 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>327, "top"=>54, "altar_id"=>170, "id"=>"39", "image"=>{"top"=>54, "left"=>327, "altar_id"=>170}}
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (1.0ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (3.9ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "54"], ["left", "327"], ["updated_at", "2021-10-09 23:40:18.836353"], ["id", 39]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 28ms (Views: 4.0ms | ActiveRecord: 6.4ms | Allocations: 3224)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:40:21 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>411, "top"=>309, "image_type"=>17, "altar_id"=>170, "image"=>{"image_type"=>17, "top"=>309, "left"=>411, "altar_id"=>170}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (4.4ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 17], ["top", "309"], ["left", "411"], ["altar_id", 170], ["created_at", "2021-10-09 23:40:21.084096"], ["updated_at", "2021-10-09 23:40:21.084096"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 25ms (Views: 0.8ms | ActiveRecord: 5.4ms | Allocations: 2805)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:40:25 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>275, "top"=>316, "image_type"=>25, "altar_id"=>170, "image"=>{"image_type"=>25, "top"=>316, "left"=>275, "altar_id"=>170}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (12.3ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 25], ["top", "316"], ["left", "275"], ["altar_id", 170], ["created_at", "2021-10-09 23:40:25.883390"], ["updated_at", "2021-10-09 23:40:25.883390"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 32ms (Views: 1.5ms | ActiveRecord: 13.4ms | Allocations: 2806)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:40:28 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>357, "top"=>207, "image_type"=>17, "altar_id"=>170, "image"=>{"image_type"=>17, "top"=>207, "left"=>357, "altar_id"=>170}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (6.0ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 17], ["top", "207"], ["left", "357"], ["altar_id", 170], ["created_at", "2021-10-09 23:40:28.542812"], ["updated_at", "2021-10-09 23:40:28.542812"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 24ms (Views: 1.5ms | ActiveRecord: 6.9ms | Allocations: 2805)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:40:36 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>409, "top"=>241, "image_type"=>17, "altar_id"=>170, "image"=>{"image_type"=>17, "top"=>241, "left"=>409, "altar_id"=>170}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (15.6ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 17], ["top", "241"], ["left", "409"], ["altar_id", 170], ["created_at", "2021-10-09 23:40:37.005611"], ["updated_at", "2021-10-09 23:40:37.005611"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 43ms (Views: 1.3ms | ActiveRecord: 20.8ms | Allocations: 2805)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:40:40 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:40:40 -0400
+Processing by ImagesController#index as HTML
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:40:40 -0400
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+  [1m[36mAltar Load (0.9ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.9ms | Allocations: 2121)
+
+
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.9ms | Allocations: 3892)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1685)
+
+
+Started PUT "/images/43" for 127.0.0.1 at 2021-10-09 19:40:59 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>195, "top"=>75, "altar_id"=>170, "id"=>"43", "image"=>{"top"=>75, "left"=>195, "altar_id"=>170}}
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (3.6ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "75"], ["left", "195"], ["updated_at", "2021-10-09 23:40:59.055487"], ["id", 43]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 5.8ms | Allocations: 3224)
+
+
+Started PUT "/images/43" for 127.0.0.1 at 2021-10-09 19:41:00 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>97, "top"=>-2, "altar_id"=>170, "id"=>"43", "image"=>{"top"=>-2, "left"=>97, "altar_id"=>170}}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (0.5ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "-2"], ["left", "97"], ["updated_at", "2021-10-09 23:41:00.393346"], ["id", 43]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 25ms (Views: 0.6ms | ActiveRecord: 7.5ms | Allocations: 3252)
+
+
+Started PUT "/images/42" for 127.0.0.1 at 2021-10-09 19:41:01 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>339, "top"=>-18, "altar_id"=>170, "id"=>"42", "image"=>{"top"=>-18, "left"=>339, "altar_id"=>170}}
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (0.6ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "-18"], ["left", "339"], ["updated_at", "2021-10-09 23:41:01.585877"], ["id", 42]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 3224)
+
+
+Started PUT "/images/42" for 127.0.0.1 at 2021-10-09 19:41:02 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>272, "top"=>69, "altar_id"=>170, "id"=>"42", "image"=>{"top"=>69, "left"=>272, "altar_id"=>170}}
+  [1m[36mImage Load (0.6ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.7ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (4.7ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "69"], ["left", "272"], ["updated_at", "2021-10-09 23:41:02.817915"], ["id", 42]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 25ms (Views: 1.0ms | ActiveRecord: 6.8ms | Allocations: 3224)
+
+
+Started PUT "/images/41" for 127.0.0.1 at 2021-10-09 19:41:04 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>149, "top"=>253, "altar_id"=>170, "id"=>"41", "image"=>{"top"=>253, "left"=>149, "altar_id"=>170}}
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (0.7ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "left" = $2, "updated_at" = $3 WHERE "images"."id" = $4[0m  [["top", "253"], ["left", "149"], ["updated_at", "2021-10-09 23:41:04.968945"], ["id", 41]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 20ms (Views: 1.4ms | ActiveRecord: 2.4ms | Allocations: 3224)
+
+
+Started PUT "/images/42" for 127.0.0.1 at 2021-10-09 19:41:06 -0400
+Processing by ImagesController#update as HTML
+  Parameters: {"left"=>272, "top"=>105, "altar_id"=>170, "id"=>"42", "image"=>{"top"=>105, "left"=>272, "altar_id"=>170}}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:44:in `set_image'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mAltar Load (0.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mImage Update (1.3ms)[0m  [1m[33mUPDATE "images" SET "top" = $1, "updated_at" = $2 WHERE "images"."id" = $3[0m  [["top", "105"], ["updated_at", "2021-10-09 23:41:06.265345"], ["id", 42]]
+  ↳ app/controllers/images_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:29:in `update'
+Completed 200 OK in 23ms (Views: 0.5ms | ActiveRecord: 2.4ms | Allocations: 3211)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:41:24 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>199, "top"=>100, "image_type"=>25, "altar_id"=>168, "image"=>{"image_type"=>25, "top"=>100, "left"=>199, "altar_id"=>168}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 168], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (1.0ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 25], ["top", "100"], ["left", "199"], ["altar_id", 168], ["created_at", "2021-10-09 23:41:24.987675"], ["updated_at", "2021-10-09 23:41:24.987675"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 21ms (Views: 0.6ms | ActiveRecord: 2.1ms | Allocations: 2805)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:41:26 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>128, "top"=>92, "image_type"=>16, "altar_id"=>168, "image"=>{"image_type"=>16, "top"=>92, "left"=>128, "altar_id"=>168}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.5ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 168], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (6.4ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 16], ["top", "92"], ["left", "128"], ["altar_id", 168], ["created_at", "2021-10-09 23:41:26.107279"], ["updated_at", "2021-10-09 23:41:26.107279"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 24ms (Views: 0.9ms | ActiveRecord: 7.7ms | Allocations: 2805)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:41:38 -0400
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:41:38 -0400
+Processing by AltarsController#index as HTML
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:41:38 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (1.2ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 1.2ms | Allocations: 1646)
+
+
+  [1m[36mUser Load (22.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 38ms (Views: 0.4ms | ActiveRecord: 22.4ms | Allocations: 2224)
+
+
+  [1m[36mImage Load (8.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 58ms (Views: 48.7ms | ActiveRecord: 8.4ms | Allocations: 3911)
+
+
+Started POST "/altars/" for 127.0.0.1 at 2021-10-09 19:41:51 -0400
+Processing by AltarsController#create as HTML
+  Parameters: {"name"=>"Hypnotic Sanctuary", "user_id"=>43, "privacy"=>false, "altar"=>{"name"=>"Hypnotic Sanctuary", "user_id"=>43, "privacy"=>false}}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/altars_controller.rb:22:in `create'
+  [1m[36mAltar Create (25.3ms)[0m  [1m[32mINSERT INTO "altars" ("name", "user_id", "privacy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Hypnotic Sanctuary"], ["user_id", 43], ["privacy", false], ["created_at", "2021-10-09 23:41:51.794543"], ["updated_at", "2021-10-09 23:41:51.794543"]]
+  ↳ app/controllers/altars_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/altars_controller.rb:22:in `create'
+Completed 201 Created in 194ms (Views: 3.4ms | ActiveRecord: 31.5ms | Allocations: 2727)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:41:51 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:41:51 -0400
+Processing by AltarsController#index as HTML
+Processing by ImagesController#index as HTML
+  [1m[36mAltar Load (0.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1214)
+
+
+  [1m[36mImage Load (4.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 19.9ms | ActiveRecord: 4.8ms | Allocations: 3174)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:41:53 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>155, "top"=>134, "image_type"=>25, "altar_id"=>172, "image"=>{"image_type"=>25, "top"=>134, "left"=>155, "altar_id"=>172}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.4ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 172], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (2.1ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 25], ["top", "134"], ["left", "155"], ["altar_id", 172], ["created_at", "2021-10-09 23:41:53.869765"], ["updated_at", "2021-10-09 23:41:53.869765"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 17ms (Views: 0.9ms | ActiveRecord: 3.1ms | Allocations: 2805)
+
+
+Started POST "/images/" for 127.0.0.1 at 2021-10-09 19:41:55 -0400
+Processing by ImagesController#create as HTML
+  Parameters: {"left"=>107, "top"=>148, "image_type"=>16, "altar_id"=>172, "image"=>{"image_type"=>16, "top"=>148, "left"=>107, "altar_id"=>172}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mAltar Load (0.3ms)[0m  [1m[34mSELECT "altars".* FROM "altars" WHERE "altars"."id" = $1 LIMIT $2[0m  [["id", 172], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mImage Create (0.8ms)[0m  [1m[32mINSERT INTO "images" ("image_type", "top", "left", "altar_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_type", 16], ["top", "148"], ["left", "107"], ["altar_id", 172], ["created_at", "2021-10-09 23:41:55.745915"], ["updated_at", "2021-10-09 23:41:55.745915"]]
+  ↳ app/controllers/images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:20:in `create'
+Completed 201 Created in 20ms (Views: 2.5ms | ActiveRecord: 1.7ms | Allocations: 2805)
+
+
+Started GET "/altars" for 127.0.0.1 at 2021-10-09 19:42:15 -0400
+Processing by AltarsController#index as HTML
+Started GET "/auth/verify" for 127.0.0.1 at 2021-10-09 19:42:15 -0400
+Started GET "/images" for 127.0.0.1 at 2021-10-09 19:42:15 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAltar Load (2.1ms)[0m  [1m[34mSELECT "altars".* FROM "altars"[0m
+  ↳ app/controllers/altars_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 2.1ms | Allocations: 1795)
+
+
+Processing by ImagesController#index as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 7.1ms | Allocations: 2063)
+
+
+  [1m[36mImage Load (12.0ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/images_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 12.1ms | ActiveRecord: 12.0ms | Allocations: 3014)
+
+

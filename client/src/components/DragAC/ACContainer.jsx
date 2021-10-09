@@ -1,8 +1,14 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useDrop } from "react-dnd";
 import ACBox from "./ACBox.jsx";
 import update from "immutability-helper";
 import AltarImage from "../AltarImage/AltarImage";
+
+import {
+  createImage,
+  updateImage,
+  deleteImage,
+} from "../../services/images.js";
 
 const styles = {
   width: "100vw",
@@ -18,63 +24,96 @@ export const ACContainer = ({
 }) => {
   const containerDiv = useRef();
 
-  const dragImages = images.reduce((acc, image) => {
-    if (image.altar_id === altar.id) {
-      acc[image.id] = {
-        top: parseFloat(image.top),
-        left: parseFloat(image.left),
-        imageType: image.image_type,
-      };
-    }
-    return acc;
-  }, {});
+  useEffect(() => {
+    const dragImages = images.reduce((acc, image) => {
+      if (image.altar_id === altar.id) {
+        acc[image.id] = {
+          top: parseFloat(image.top),
+          left: parseFloat(image.left),
+          imageType: image.image_type,
+        };
+      }
+      return acc;
+    }, {});
+    setBoxes(dragImages);
+  }, [images]);
 
-  const [boxes, setBoxes] = useState(dragImages);
+  const [boxes, setBoxes] = useState({});
 
   const moveBox = useCallback(
-    (id, left, top, imageType) => {
-      if (!id) {
-        id = "" + Math.random();
-        setBoxes({
-          ...boxes,
+    (id, left, top) => {
+      setBoxes(
+        update(boxes, {
           [id]: {
-            left: left,
-            top: top,
-            imageType: imageType,
+            $merge: { left, top },
           },
-        });
-      } else {
-        setBoxes(
-          update(boxes, {
-            [id]: {
-              $merge: { left, top },
-            },
-          })
-        );
-      }
+        })
+      );
     },
     [boxes, setBoxes]
   );
+
+  const createBox = useCallback(
+    (id, left, top, imageType) => {
+      setBoxes({
+        ...boxes,
+        [id]: {
+          left: left,
+          top: top,
+          imageType: imageType,
+        },
+      });
+    },
+    [boxes, setBoxes]
+  );
+
   const [, drop] = useDrop(
     () => ({
       accept: "box",
-      drop(item, monitor) {
+      drop(image, monitor) {
         if (dragDisabled) return;
-        const delta = monitor.getDifferenceFromInitialOffset();
-        console.log(delta);
-        const left = Math.round(item.left + delta.x);
-        const top = Math.round(item.top + delta.y);
 
-        const offset = monitor.getClientOffset();
-        let x = offset.x;
-        let y = offset.y;
-        x -= containerDiv.current.getBoundingClientRect().left;
-        y -= containerDiv.current.getBoundingClientRect().top;
-
-        if (item.id) {
-          moveBox(item.id, left, top);
+        if (image.id) {
+          const delta = monitor.getDifferenceFromInitialOffset();
+          const left = Math.round(image.left + delta.x);
+          const top = Math.round(image.top + delta.y);
+          moveBox(image.id, left, top);
+          updateImage(image.id, {
+            left: left,
+            top: top,
+            image_type: image.imageType,
+            altar_id: altar.id,
+          });
+          // this updates image in the database.
         } else {
-          moveBox(null, x, y, item.imageType);
+          const offset = monitor.getClientOffset();
+          let x = offset.x;
+          let y = offset.y;
+          x -= containerDiv.current.getBoundingClientRect().left;
+          y -= containerDiv.current.getBoundingClientRect().top;
+          (async () => {
+            let data = await createImage({
+              left: x,
+              top: y,
+              image_type: image.imageType,
+              altar_id: altar.id,
+            });
+            createBox(data.id, x, y, image.imageType);
+          })();
+
+          // moves the images from the right container to the left
+
+          // import { createImage, updateImage, deleteImage } from "../../services/images.js";
+
+          // const handleRemove = async () => {
+          //   await removeFromCart(props.user.id, fullJam._id);
+          //   props.setToggleFetch(prevState => !prevState)
+          // }
+
+          // const handleAdd = async () => {
+          //   await addToCart(props.user.id, fullJam._id)
+          //   props.setToggleFetch(prevState => !prevState)
+          // }
         }
 
         return undefined;
