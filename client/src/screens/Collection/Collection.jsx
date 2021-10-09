@@ -9,12 +9,15 @@ export default function Collection(props) {
       {/* <img src="https://i.imgur.com/zN0kGhO.png" width="500px" alt="placeholder"/> */}
       {props.altars.map((altar) =>
         altar.privacy === false ? (
+          <>
           <AltarCard
             collection
             user={props.user}
             images={props.images}
             altar={altar}
           />
+            <p className="text-primary text-center"> {altar.name}</p>
+            </>
         ) : null
       )}
       <h1 className="text-primary mt-2 mb-4">{props.altars.name}</h1>

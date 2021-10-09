@@ -37,12 +37,11 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     t: { top: 350, left: 870, imageType: 21 },
     u: { top: 200, left: 650, imageType: 22 },
     v: { top: 500, left: 50, imageType: 23 },
-    w: { top: 500, left: 50, imageType: 24 },
+    w: { top: 100, left: 915, imageType: 24 },
     x: { top: 500, left: 900, imageType: 25 },
     y: { top: 500, left: 790, imageType: 26 },
-    
-    
     z: { top: 375, left: 575, imageType: 20 },
+    
 
   });
   const moveBox = useCallback(

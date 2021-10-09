@@ -82,7 +82,7 @@ export default function AltarImage(props) {
       ) : null}
 
       {props.imageType === 20 ? (
-        <img className="w-36" src="https://i.imgur.com/s9l4lQH.png" alt="medicinewheel" />
+        <img className="w-32" src="https://i.imgur.com/s9l4lQH.png" alt="medicinewheel" />
       ) : null}
 
       {props.imageType === 21 ? (

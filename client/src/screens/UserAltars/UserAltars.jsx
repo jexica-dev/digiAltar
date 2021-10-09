@@ -66,12 +66,16 @@ export default function UserAltars(props) {
       {props.altars.map((altar) =>
         props.user?.id === altar.user_id ? (
           <>
+            <div className="flex flex-col">
             <AltarCard
               setToggleFetch={props.setToggleFetch}
               user={props.user}
               images={props.images}
               altar={altar}
-            />
+              />
+              </div>
+            <p className="m-2 text-center text-primary">{altar.name}</p>
+            <div className="text-center">
             <Button
               onClick={(e) => {
                 e.preventDefault();
@@ -89,7 +93,8 @@ export default function UserAltars(props) {
               }}
             >
               Delete
-            </Button>
+              </Button>
+              </div>
           </>
         ) : null
       )}
