@@ -6,6 +6,7 @@ import Button from "../../components/Button/Button";
 import AltarCard from "../../components/AltarCard/AltarCard";
 import { createAltar } from "../../services/altars";
 import { deleteAltar } from "../../services/altars";
+import { ACExample } from "../../components/DragAC/ACExample";
 
 export default function UserAltars(props) {
   const history = useHistory();
@@ -66,35 +67,44 @@ export default function UserAltars(props) {
       {props.altars.map((altar) =>
         props.user?.id === altar.user_id ? (
           <>
-            <div className="flex flex-col">
-            <AltarCard
+            <div className="flex flex-col w-screen justify-center">
+              {/* <AltarCard
               setToggleFetch={props.setToggleFetch}
               user={props.user}
               images={props.images}
               altar={altar}
+              /> */}
+
+              <ACExample
+                
+                setToggleFetch={props.setToggleFetch}
+                altar={altar}
+                images={props.images}
               />
-              </div>
+
+              {/* Replaced with ACDrag */}
+            </div>
             <p className="m-2 text-center text-primary">{altar.name}</p>
             <div className="text-center">
-            <Button
-              onClick={(e) => {
-                e.preventDefault();
-                history.push(`/myaltars/${altar.id}/edit`);
-              }}
-            >
-              Edit
-            </Button>
-            <Button
-              onClick={(e) => {
-                deleteAltar(altar.id);
-                setTimeout(() => {
-                  props.setToggleFetch((prevState) => !prevState);
-                }, 500);
-              }}
-            >
-              Delete
+              <Button
+                onClick={(e) => {
+                  e.preventDefault();
+                  history.push(`/myaltars/${altar.id}/edit`);
+                }}
+              >
+                Edit
               </Button>
-              </div>
+              <Button
+                onClick={(e) => {
+                  deleteAltar(altar.id);
+                  setTimeout(() => {
+                    props.setToggleFetch((prevState) => !prevState);
+                  }, 500);
+                }}
+              >
+                Delete
+              </Button>
+            </div>
           </>
         ) : null
       )}

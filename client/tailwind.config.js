@@ -26,7 +26,14 @@ module.exports = {
     })
   },
   variants: {
-    extend: {},
+    extend: {
+
+      spacing: {
+
+        '192': '48rem',
+
+      }
+    },
   },
   plugins: [],
 }

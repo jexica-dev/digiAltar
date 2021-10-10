@@ -11,9 +11,10 @@ import {
 } from "../../services/images.js";
 
 const styles = {
-  width: "100vw",
-  height: "100vh",
+  // width: "100vw",
+  // height: "100vh",
   position: "relative",
+  border: '1px solid white',
 };
 
 export const ACContainer = ({
@@ -113,8 +114,8 @@ export const ACContainer = ({
   );
 
   return (
-    <div ref={drop} style={styles}>
-      <div ref={containerDiv} className="w-full h-full">
+    <div ref={drop} style={styles} className="w-192 h-96">
+      <div ref={containerDiv} >
         {Object.keys(boxes).map((key) => {
           const box = boxes[key];
 
@@ -126,6 +127,7 @@ export const ACContainer = ({
               }}
             >
               <ACBox
+              
                 key={key}
                 id={key}
                 left={box.left}

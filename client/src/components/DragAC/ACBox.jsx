@@ -1,5 +1,6 @@
 import { useDrag } from 'react-dnd';
 const style = {
+    
     position: 'absolute',
     backgroundColor: 'none',
     // padding: '0.5rem 1rem',
