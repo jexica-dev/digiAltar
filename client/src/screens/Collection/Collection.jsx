@@ -15,12 +15,13 @@ export default function Collection(props) {
             user={props.user}
             images={props.images}
             altar={altar}
-          />
+            />
+            
             <p className="text-primary text-center"> {altar.name}</p>
             </>
         ) : null
       )}
-      <h1 className="text-primary mt-2 mb-4">{props.altars.name}</h1>
+      
     </div>
   );
 }

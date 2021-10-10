@@ -7,6 +7,7 @@ import AltarCard from "../../components/AltarCard/AltarCard";
 import { createAltar } from "../../services/altars";
 import { deleteAltar } from "../../services/altars";
 import { ACExample } from "../../components/DragAC/ACExample";
+import { deleteImage } from "../../services/images";
 
 export default function UserAltars(props) {
   const history = useHistory();
@@ -76,7 +77,7 @@ export default function UserAltars(props) {
               /> */}
 
               <ACExample
-                
+                // dragDisabled
                 setToggleFetch={props.setToggleFetch}
                 altar={altar}
                 images={props.images}
@@ -95,11 +96,16 @@ export default function UserAltars(props) {
                 Edit
               </Button>
               <Button
-                onClick={(e) => {
-                  deleteAltar(altar.id);
-                  setTimeout(() => {
-                    props.setToggleFetch((prevState) => !prevState);
-                  }, 500);
+                onClick={async (e) => {
+
+                  for (let image of props.images) {
+                    if (image.altar_id == altar.id) {
+                      await deleteImage(image.id)
+                    }
+                  }
+                  
+                  await deleteAltar(altar.id);
+                  props.setToggleFetch((prevState) => (!prevState));
                 }}
               >
                 Delete
