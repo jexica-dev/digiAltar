@@ -18,7 +18,7 @@ export default function CreateContainer(props) {
         <div className="clear-both overflow-hidden create-altar-container mt-4 ml-8 w-1/2 h-96 justify-left border border-primary">
           <p className="ml-2 text-left text-sm text-primary -mb-10"> doubleclick to delete</p>
           {/* <AltarCard setToggleFetch={props.setToggleFetch} user={props.user} images={props.images} altar={props.altar} /> */}
-          <ACExample altar={props.altar} images={props.images} />
+          <ACExample setToggleFetch={props.setToggleFetch}  altar={props.altar} images={props.images} />
 
         </div>
 

@@ -55,7 +55,7 @@ export default function AltarForm(props) {
 
       {/* Form for draggable saved images */}
 
-      <CreateExample altar={props.altar} images={props.images} />
+      <CreateExample setToggleFetch={props.setToggleFetch}  altar={props.altar} images={props.images} />
       
       
     </>

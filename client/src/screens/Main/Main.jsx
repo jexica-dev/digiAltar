@@ -46,7 +46,7 @@ export default function Main(props) {
           <UserAltars setToggleFetch={setToggleFetch} handleLogout={props.handleLogout} user={props.user} images={images}  altars={altars} />
         </Route>
         <Route path="/myaltars/:altarId/edit">
-          <AltarEdit user={props.user} images={images}  altars={altars} />
+          <AltarEdit setToggleFetch={setToggleFetch} user={props.user} images={images}  altars={altars} />
         </Route>
         <Route path="/about">
           <About />

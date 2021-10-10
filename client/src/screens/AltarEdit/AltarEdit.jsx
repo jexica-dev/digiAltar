@@ -11,7 +11,7 @@ export default function AltarEdit(props) {
         return (altar.id == altarId);
       }).map((altar) => {
         return (
-          <AltarForm user={props.user} images={props.images}  altar={altar} />
+          <AltarForm setToggleFetch={props.setToggleFetch} user={props.user} images={props.images}  altar={altar} />
         )
       })}
   

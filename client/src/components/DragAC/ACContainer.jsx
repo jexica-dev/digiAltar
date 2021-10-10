@@ -21,6 +21,7 @@ export const ACContainer = ({
   dragDisabled,
   altar,
   images,
+  setToggleFetch,
 }) => {
   const containerDiv = useRef();
 
@@ -70,7 +71,7 @@ export const ACContainer = ({
   const [, drop] = useDrop(
     () => ({
       accept: "box",
-      drop(image, monitor) {
+      async drop(image, monitor) {
         if (dragDisabled) return;
 
         if (image.id) {
@@ -78,12 +79,14 @@ export const ACContainer = ({
           const left = Math.round(image.left + delta.x);
           const top = Math.round(image.top + delta.y);
           moveBox(image.id, left, top);
-          updateImage(image.id, {
+          await updateImage(image.id, {
             left: left,
             top: top,
             image_type: image.imageType,
             altar_id: altar.id,
           });
+
+          setToggleFetch((prevState) => !prevState);
           // this updates image in the database.
         } else {
           const offset = monitor.getClientOffset();
@@ -99,21 +102,8 @@ export const ACContainer = ({
               altar_id: altar.id,
             });
             createBox(data.id, x, y, image.imageType);
+            setToggleFetch((prevState) => !prevState);
           })();
-
-          // moves the images from the right container to the left
-
-          // import { createImage, updateImage, deleteImage } from "../../services/images.js";
-
-          // const handleRemove = async () => {
-          //   await removeFromCart(props.user.id, fullJam._id);
-          //   props.setToggleFetch(prevState => !prevState)
-          // }
-
-          // const handleAdd = async () => {
-          //   await addToCart(props.user.id, fullJam._id)
-          //   props.setToggleFetch(prevState => !prevState)
-          // }
         }
 
         return undefined;
@@ -121,38 +111,31 @@ export const ACContainer = ({
     }),
     [moveBox]
   );
+
   return (
     <div ref={drop} style={styles}>
       <div ref={containerDiv} className="w-full h-full">
         {Object.keys(boxes).map((key) => {
-          // remember this is a deconstruction
-          // which means we are pulling variables out of the
-          // boxes[key] object.
           const box = boxes[key];
+
           return (
-            // this is where we get the data from the state.
-            // in here we are mapping through the list of boxes and creating
-            // an element on the page for each box
-            // we can the contents of this box component to an altarimage so
-            // that we are dragging images
-            // around instead of text.
-            <>
-              {/* We will make the DoubleClick the Delete functionality */}
-              <button
-                onDoubleClick={() => window.alert("Doubleclick will delete!")}
+            <button
+              onDoubleClick={async () => {
+                await deleteImage(key);
+                setToggleFetch((prevState) => !prevState);
+              }}
+            >
+              <ACBox
+                key={key}
+                id={key}
+                left={box.left}
+                top={box.top}
+                hideSourceOnDrag={hideSourceOnDrag}
               >
-                <ACBox
-                  key={key}
-                  id={key}
-                  left={box.left}
-                  top={box.top}
-                  hideSourceOnDrag={hideSourceOnDrag}
-                >
-                  <AltarImage imageType={box.imageType} />
-                  {/* we can put anything we want in here, like altarimages */}
-                </ACBox>
-              </button>
-            </>
+                <AltarImage imageType={box.imageType} />
+                {/* we can put anything we want in here, like altarimages */}
+              </ACBox>
+            </button>
           );
         })}
       </div>

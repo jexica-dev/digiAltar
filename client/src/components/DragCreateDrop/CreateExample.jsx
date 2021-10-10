@@ -5,7 +5,7 @@ import  CreateContainer  from './CreateContainer'
 export default function CreateExample(props) {
   return (
 
-      <CreateContainer altar={props.altar} images={props.images} /> 
+      <CreateContainer setToggleFetch={props.setToggleFetch}  altar={props.altar} images={props.images} /> 
 
   )
 }
