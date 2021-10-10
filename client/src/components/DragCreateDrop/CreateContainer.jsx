@@ -3,13 +3,23 @@ import { CreateBox } from "./CreateBox";
 import { ACExample } from "../DragAC/ACExample";
 
 export default function CreateContainer(props) {
+
+  const numberType1 = [16, 30, 8, 43]
+  const numberType2 = [10, 18, 32]
+  const numberType3 = [31, 21, 3, 35]
+  const numberType4 = [23, 26, 15]
+  
+  
+
+  
+
   return (
     <>
       <div className="flex flex-row">
         {/* Left Box below */}
 
         <div className="clear-both overflow-hidden create-altar-container mt-4 ml-8 w-1/2 h-96 justify-left border border-primary">
-          <p className="ml-2 text-left text-sm text-primary -mb-10">
+          <p className="ml-2 mt-2 text-left text-sm text-primary -mb-10">
             {" "}
             doubleclick to delete
           </p>
@@ -22,35 +32,49 @@ export default function CreateContainer(props) {
         </div>
 
         {/* Right Box below*/}
-        <div className=" altar-image-container mt-4 mr-8 w-1/2 h-96 justify-right border border-primary z-10">
-          <p className="w-full -mt-8 ml-2 text-primary justify-right">
-            {"<<"} drag to drop
+        <div className="-mb-2 altar-image-container mt-4 mr-8 w-1/2 h-96 justify-right border border-primary z-10">
+          <p className="w-full -mt-6 ml-2 -mb-4 text-primary justify-right">
+            {"<<"} drag + drop
           </p>
 
-          <div className="relative mt-4 clear-both overflow-hidden w-full -mb-8 h-96 ">
+          <div className="-mb-2 relative mt-4 clear-both overflow-hidden w-full h-96 ">
             {/* These are the images that you can add to your altar */}
 
             {/* <AltarImage imageType={props.imageType} /> */}
 
-            <CreateBox top="3px" left="100px" imageType={25} />
-            <CreateBox imageType={18} />
-            <CreateBox imageType={1} />
-            <CreateBox imageType={7} />
-            <CreateBox imageType={2} />
-            <CreateBox imageType={4} />
-            <CreateBox imageType={19} />
-            <CreateBox imageType={5} />
-            <CreateBox imageType={9} />
-            <CreateBox imageType={20} />
-            <CreateBox imageType={14} />
-            <CreateBox imageType={11} />
-            <CreateBox imageType={10} />
-            <CreateBox imageType={13} />
-            <CreateBox imageType={12} />
-            <CreateBox imageType={8} />
-            <CreateBox imageType={3} />
-            <CreateBox imageType={17} />
-            <CreateBox imageType={16} />
+
+
+            
+            <CreateBox top="0px" left="0px" imageType={9} />
+            <CreateBox top="0px" left="100px" imageType={4} />
+            <CreateBox top="0px" left="200px" imageType={2} />
+            <CreateBox top="0px" left="300px" imageType={numberType1[Math.floor(Math.random())]} />
+            <CreateBox top="0px" left="380px" imageType={7} />
+            <CreateBox top="0px" left="500px" imageType={5} />
+
+            <CreateBox top="100px" left="0px" imageType={numberType2[Math.floor(Math.random())]} />
+            <CreateBox top="100px" left="100px" imageType={20} />
+            <CreateBox top="100px" left="200px" imageType={12} />
+            <CreateBox top="100px" left="300px" imageType={13} />
+            <CreateBox top="100px" left="380px" imageType={11} />
+            <CreateBox top="100px" left="500px" imageType={19} />
+
+            <CreateBox top="200px" left="0px" imageType={37} />
+            <CreateBox top="200px" left="100px" imageType={38} />
+            <CreateBox top="200px" left="200px" imageType={36} />
+            <CreateBox top="200px" left="300px" imageType={29} />
+            <CreateBox top="200px" left="380px" imageType={numberType3[Math.floor(Math.random())]} />
+            <CreateBox top="200px" left="500px" imageType={1} />
+
+            <CreateBox top="300px" left="0px" imageType={22} />
+            <CreateBox top="300px" left="100px" imageType={25} />
+            <CreateBox top="300px" left="200px" imageType={40} />
+            <CreateBox top="300px" left="300px" imageType={numberType4[Math.floor(Math.random() * numberType4.length)]} />
+            <CreateBox top="300px" left="380px" imageType={14} />
+            <CreateBox top="300px" left="500px" imageType={17} />
+
+  
+   
           </div>
         </div>
       </div>

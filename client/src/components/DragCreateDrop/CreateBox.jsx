@@ -2,12 +2,12 @@ import { useDrag } from "react-dnd";
 import AltarImage from "../AltarImage/AltarImage";
 
 const style = {
-  backgroundColor: "transparent",
-  padding: "0.5rem",
-  margin: '-1rem',
+  // backgroundColor: "white",
+  padding: "0.75rem",
+  margin: '.5rem',
   cursor: "move",
   float: "left",
-  height: "10rem",
+  height: "9rem",
   // width: "auto",
 };
 

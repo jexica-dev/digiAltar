@@ -19,6 +19,8 @@ export default function UserAltars(props) {
     "Crypto",
     "Digital",
     "Byte",
+    "Matrix",
+    "Algo",
   ];
   const randomName2 = [
     "Sanctuary",
@@ -47,7 +49,7 @@ export default function UserAltars(props) {
   };
 
   return (
-    <>
+    <div className="mb-24">
       {props.user ? (
         <div className="mt-32 text-right mr-12">
           <span className="text-primary mr-8">
@@ -68,25 +70,20 @@ export default function UserAltars(props) {
       {props.altars.map((altar) =>
         props.user?.id === altar.user_id ? (
           <>
-            <div className="flex flex-col w-screen justify-center">
-              {/* <AltarCard
-              setToggleFetch={props.setToggleFetch}
-              user={props.user}
-              images={props.images}
-              altar={altar}
-              /> */}
-
+            <div className="w-screen">
+            <div className="flex flex-col w-1/2">
+            
               <ACExample
-                // dragDisabled
+                dragDisabled
                 setToggleFetch={props.setToggleFetch}
                 altar={altar}
                 images={props.images}
               />
-
-              {/* Replaced with ACDrag */}
             </div>
+            </div>
+
             <p className="m-2 text-center text-primary">{altar.name}</p>
-            <div className="text-center">
+            <div className="text-center mb-10">
               <Button
                 onClick={(e) => {
                   e.preventDefault();
@@ -114,6 +111,6 @@ export default function UserAltars(props) {
           </>
         ) : null
       )}
-    </>
+    </div>
   );
 }

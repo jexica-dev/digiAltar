@@ -115,14 +115,14 @@ export default function AltarImage(props) {
       {props.imageType === 18 ? (
         <img
           className="w-20"
-          src="https://i.imgur.com/lR5yXku.png"
-          alt="candle3"
+          src="https://i.imgur.com/c1QwUaA.png"
+          alt="helloluckycat"
         />
       ) : null}
 
       {props.imageType === 19 ? (
         <img
-          className="w-36"
+          className="w-32"
           src="https://i.imgur.com/f0A81Bs.png"
           alt="candleholder"
         />
@@ -244,7 +244,7 @@ export default function AltarImage(props) {
         <img
           className="w-20"
           src="https://i.imgur.com/JAR3AGZ.png"
-          alt="flowers2"
+          alt="flowers3"
         />
       ) : null}
 
@@ -288,6 +288,37 @@ export default function AltarImage(props) {
         />
       ) : null}
 
+      {props.imageType === 40 ? (
+        <img
+          className="w-32"
+          src="https://i.imgur.com/CIli1Rt.png"
+          alt="flowerpetals"
+        />
+      ) : null}
+
+      {props.imageType === 41 ? (
+        <img
+          className="w-32"
+          src="https://i.imgur.com/sKfC5ZU.png"
+          alt="totempole"
+        />
+      ) : null}
+
+      {props.imageType === 42 ? (
+        <img
+          className="w-30"
+          src="https://i.imgur.com/s8bJxPb.png"
+          alt="cathedral"
+        />
+      ) : null}
+
+      {props.imageType === 43 ? (
+        <img
+          className="w-30"
+          src="https://i.imgur.com/anE6ZSl.png"
+          alt="angel"
+        />
+      ) : null}
     </div>
   );
 }

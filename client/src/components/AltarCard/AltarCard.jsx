@@ -20,9 +20,6 @@ export default function AltarCard(props) {
           </>
         ))}
 
-      {/* 
-        <h1 className="text-primary mt-2 mb-4">{props.altar.name}</h1>
-     */}
 
       )}
     </div>

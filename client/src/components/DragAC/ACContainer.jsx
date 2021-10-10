@@ -14,7 +14,7 @@ const styles = {
   // width: "100vw",
   // height: "100vh",
   position: "relative",
-  border: '1px solid white',
+  border: '1px solid yellow',
 };
 
 export const ACContainer = ({
@@ -121,13 +121,15 @@ export const ACContainer = ({
 
           return (
             <button
+              
               onDoubleClick={async () => {
+                if (dragDisabled) return;
                 await deleteImage(key);
                 setToggleFetch((prevState) => !prevState);
               }}
+              
             >
               <ACBox
-              
                 key={key}
                 id={key}
                 left={box.left}

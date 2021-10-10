@@ -16,7 +16,9 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     // you can store an image ID to pass into altarimages here for example.
     
     a: { top: 455, left: 500, imageType: 7 },
+    ap: { top: 275, left: 1120, imageType: 42 },
     ac: { top: 180, left: 1100, imageType: 30 },
+    ao: { top: 150, left: 815, imageType: 41 },
     ab: { top: 80, left: 485, imageType: 29 },
     b: { top: 75, left: 175, imageType: 6 },
     c: { top: 20, left: 80, imageType: 1 },
@@ -27,7 +29,7 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     h: { top: 200, left: 125, imageType: 4 },
     i: { top: 375, left: 325, imageType: 15 },
     j: { top: 350, left: 100, imageType: 14 },
-    k: { top: 250, left: 525, imageType: 11 },
+    k: { top: 250, left: 535, imageType: 11 },
     l: { top: 355, left: 455, imageType: 10 },
     m: { top: 185, left: 750, imageType: 17 },
     n: { top: 425, left: 845, imageType: 16 },
@@ -53,7 +55,9 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     ai: { top: 100, left: 700, imageType: 35 },
     ak: { top: 610, left: 200, imageType: 37 },
     aj: { top: 400, left: 635, imageType: 36 },
-    am: { top: 600, left: 1000, imageType: 39 },
+    am: { top: 75, left: 1000, imageType: 39 },
+    an: { top: 330, left: 1150, imageType: 40 },
+    // aq: { top: 50, left: 1000, imageType: 43 },
     
 
   });

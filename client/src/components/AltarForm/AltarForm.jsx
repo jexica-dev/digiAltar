@@ -62,12 +62,6 @@ export default function AltarForm(props) {
             className="toggle-label block overflow-hidden h-6 rounded-full bg-secondary cursor-pointer"
           ></label>
         </div>
-        {/* <div className="ml-10">
-          <Button>download</Button>
-        </div>
-        <div className="ml-4">
-          <Button>save</Button>
-        </div> */}
       </div>
 
       {/* Form for draggable saved images */}
