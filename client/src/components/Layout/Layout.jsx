@@ -8,7 +8,7 @@ export default function Layout(props) {
     <>
       <div className="layout-container">
         <Header />
-        <div className="layout-children">{props.children}</div>
+        <div className="layout-children mb-24">{props.children}</div>
         <FooterNav user={props.user}/>
       </div>
     </>

@@ -3,7 +3,6 @@ import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import "./UserAltars";
 import Button from "../../components/Button/Button";
-import AltarCard from "../../components/AltarCard/AltarCard";
 import { createAltar } from "../../services/altars";
 import { deleteAltar } from "../../services/altars";
 import { ACExample } from "../../components/DragAC/ACExample";
@@ -11,6 +10,16 @@ import { deleteImage } from "../../services/images";
 
 export default function UserAltars(props) {
   const history = useHistory();
+
+  const stylesACContainer = {
+    alignItems: 'center',
+    width:'100%'
+  }
+
+  const stylesAC = {
+    width: '580px',
+    alignItems: 'center'
+  }
 
   const randomName = [
     "Hypnotic",
@@ -70,19 +79,23 @@ export default function UserAltars(props) {
       {props.altars.map((altar) =>
         props.user?.id === altar.user_id ? (
           <>
-            <div className="w-screen">
-            <div className="flex flex-col w-1/2">
+            <div className="w-screen flex flex-col" style={stylesACContainer}>
+            <div className="" style={stylesAC}>
             
               <ACExample
                 dragDisabled
                 setToggleFetch={props.setToggleFetch}
                 altar={altar}
                 images={props.images}
-              />
+                />
+                
+                <p className="m-2 text-center text-primary">{altar.name}</p>
+
+                
             </div>
             </div>
 
-            <p className="m-2 text-center text-primary">{altar.name}</p>
+            
             <div className="text-center mb-10">
               <Button
                 onClick={(e) => {

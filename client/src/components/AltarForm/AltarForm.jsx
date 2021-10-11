@@ -1,6 +1,5 @@
 import { React, useState} from "react";
 import "./AltarForm.css";
-import AltarCard from "../AltarCard/AltarCard";
 // import AltarImage from "../AltarImage/AltarImage";
 import CreateExample from "../DragCreateDrop/CreateExample";
 import Button from "../Button/Button";

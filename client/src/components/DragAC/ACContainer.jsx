@@ -14,7 +14,9 @@ const styles = {
   // width: "100vw",
   // height: "100vh",
   position: "relative",
-  border: '1px solid yellow',
+  background: 'black',
+  filter: "drop-shadow(0 0 .5rem #ffff0017)",
+  borderRadius: "1rem"
 };
 
 export const ACContainer = ({
@@ -114,7 +116,7 @@ export const ACContainer = ({
   );
 
   return (
-    <div ref={drop} style={styles} className="w-192 h-96">
+    <div ref={drop} style={styles} className="w-192 h-96 overflow-hidden">
       <div ref={containerDiv} >
         {Object.keys(boxes).map((key) => {
           const box = boxes[key];

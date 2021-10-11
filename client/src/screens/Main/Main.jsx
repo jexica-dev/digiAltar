@@ -7,7 +7,7 @@ import About from "../About/About.jsx";
 import UserAltars from "../UserAltars/UserAltars";
 import AltarEdit from "../AltarEdit/AltarEdit";
 import { useParams } from 'react-router';
-import { DragExample } from "../../components/DragMain/DragExample";
+import {DragExample} from "../../components/DragMain/DragExample";
 
 
 export default function Main(props) {
@@ -38,6 +38,7 @@ export default function Main(props) {
   
   return (
     <div>
+    
       <Switch>
         <Route path="/collection">
           <Collection collection={collection} images={images}  altars={altars} />
@@ -55,6 +56,8 @@ export default function Main(props) {
         <DragExample />
         </Route>
       </Switch>
+
     </div>
+    
   );
 }
