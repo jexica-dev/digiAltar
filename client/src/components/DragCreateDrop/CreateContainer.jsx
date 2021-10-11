@@ -66,12 +66,18 @@ export default function CreateContainer(props) {
             <CreateBox top="300px" left="500px" imageType={17} />
 
             <CreateBox top="400px" left="0px" imageType={32} />
-            <CreateBox top="400px" left="100px" imageType={38} />
+            <CreateBox top="400px" left="100px" imageType={16} />
             <CreateBox top="400px" left="200px" imageType={3} />
-            <CreateBox top="400px" left="300px" imageType={21} />
-            <CreateBox top="400px" left="380px" imageType={15} />
+            <CreateBox top="400px" left="300px" imageType={24} />
+            <CreateBox top="400px" left="380px" imageType={23} />
             <CreateBox top="400px" left="500px" imageType={30} />
             
+            <CreateBox top="500px" left="0px" imageType={34} />
+            <CreateBox top="500px" left="100px" imageType={26} />
+            <CreateBox top="500px" left="200px" imageType={31} />
+            <CreateBox top="500px" left="300px" imageType={38} />
+            <CreateBox top="500px" left="380px" imageType={15} />
+            <CreateBox top="500px" left="500px" imageType={21} />
 
             
 

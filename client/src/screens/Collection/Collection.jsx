@@ -1,7 +1,6 @@
 import React from "react";
 import "./Collection.css";
 import { ACExample } from "../../components/DragAC/ACExample";
-import Layout from "../../components/Layout/Layout";
 
 export default function Collection(props) {
   const stylesCContainer = {
@@ -15,7 +14,7 @@ export default function Collection(props) {
   };
 
   return (
-    <Layout>
+    
     <div>
       {/* <h1 className="text-primary mt-44 text-center"> Collection</h1> */}
       {/* <img src="https://i.imgur.com/zN0kGhO.png" width="500px" alt="placeholder"/> */}
@@ -31,10 +30,10 @@ export default function Collection(props) {
                   images={props.images}
                 />
 
-                <p className="absolute z-10 bottom-2 left-4 text-left text-primary">
+                <p className="absolute z-10 bottom-4 left-6 text-left text-primary">
                   {altar.name}
                 </p>
-                <p className="absolute z-10 bottom-2 right-4 text-right text-primary">
+                <p className="absolute z-10 bottom-4 right-6 text-right text-primary">
                   {altar.user.username}
                 </p>
 
@@ -44,6 +43,6 @@ export default function Collection(props) {
         ) : null
       )}
       </div>
-      </Layout>
+    
   );
 }

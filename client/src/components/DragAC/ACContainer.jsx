@@ -10,12 +10,12 @@ import {
   deleteImage,
 } from "../../services/images.js";
 
-const styles = {
+const stylesAltars = {
   // width: "100vw",
   // height: "100vh",
   position: "relative",
   background: 'black',
-  filter: "drop-shadow(0 0 .5rem #ffff0017)",
+  filter: "drop-shadow(0 0 .85rem #ffff0019)",
   borderRadius: "1rem"
 };
 
@@ -116,7 +116,7 @@ export const ACContainer = ({
   );
 
   return (
-    <div ref={drop} style={styles} className="w-192 h-96 overflow-hidden">
+    <div ref={drop} style={stylesAltars} className="w-192 h-96 overflow-hidden">
       <div ref={containerDiv} >
         {Object.keys(boxes).map((key) => {
           const box = boxes[key];

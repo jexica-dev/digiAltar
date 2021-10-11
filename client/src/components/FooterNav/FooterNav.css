@@ -27,3 +27,56 @@ color: yellow;
 .footer-nav-container a:link {
   text-decoration: none;
 }
+
+.navBar {
+  position: relative;
+}
+
+.navBar button {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  padding:15px 0 15px 15px
+}
+
+.menuNav{
+  font-weight:bold; 
+  font-size:1rem; 
+  text-align:left; 
+  font-size:25px;
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  /* top: 10%; */
+  background: yellow;
+  left: 0;
+  bottom: 10%;
+  /* height: 30vw; */
+  width: 0;
+  overflow: hidden;
+  max-width: 100vw;
+  z-index: 9;
+}
+/* .menuNav li:first-child {
+  margin-bottom: 7rem;
+} */
+
+ .menuNav ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menuNav li {display: block;   padding:15px 0 15px 15px; border-bottom:black 1px solid;}
+.menuNav li:hover{display: block;    background: white; padding:15px 0 15px 15px; border-bottom:#9395ff 1px solid;}
+.menuNav ul li a { text-decoration:none;  margin: 0px; color:black;}
+.menuNav ul li a:hover {  background-color: #9395ff; text-decoration:none;}
+.menuNav a{text-decoration:none;}
+.menuNav a:hover{text-decoration:none;} 
+
+
+.menuNav.showMenu {
+  width: 100%;
+}
+
+.menuNav a {
+  display: block;
+  padding: 15px 0 15px 15px;
+
+}
