@@ -1,6 +1,8 @@
 import React from "react";
+import dateFormat from "dateformat";
 import "./Collection.css";
 import { ACExample } from "../../components/DragAC/ACExample";
+import { Desktop, Mobile } from "../../utils/media";
 
 export default function Collection(props) {
   const stylesCContainer = {
@@ -13,15 +15,18 @@ export default function Collection(props) {
     alignItems: "center",
   };
 
+  const dateCreated = dateFormat(props.altars.created_at, "yyyy-mm-dd");
+
   return (
-    
-    <div>
-      {/* <h1 className="text-primary mt-44 text-center"> Collection</h1> */}
-      {/* <img src="https://i.imgur.com/zN0kGhO.png" width="500px" alt="placeholder"/> */}
+    <div className="pt-20 pb-20">
+
       {props.altars.map((altar) =>
         altar.privacy === false ? (
           <>
-            <div className="w-screen flex flex-col mb-8" style={stylesCContainer}>
+            <div
+              className="m-8 w-screen flex flex-col "
+              style={stylesCContainer}
+            >
               <div className="m-2 relative" style={stylesCC}>
                 <ACExample
                   dragDisabled
@@ -29,20 +34,37 @@ export default function Collection(props) {
                   altar={altar}
                   images={props.images}
                 />
-
-                <p className="absolute z-10 bottom-4 left-6 text-left text-primary">
-                  {altar.name}
-                </p>
-                <p className="absolute z-10 bottom-4 right-6 text-right text-primary">
-                  {altar.user.username}
-                </p>
-
+                <Desktop>
+                  <div className="absolute bottom-0 left-0 text-primary text-lg">
+                    <p className="ml-4 mb-2">
+                      {altar.name}
+                    </p>
+                    
+                </div>
+                  <div className="absolute bottom-0 right-0 mb-2 mr-4 text-black text-right text-sm hover:text-secondary">
+                    <p className="">{altar.user.username}</p>
+                    <p className="">{dateCreated}</p>
+                  </div>
+                  <div className="absolute top-0 left-0 text-primary text-sm mt-2 ml-4">
+                  
+                  </div>
+                </Desktop>
               </div>
+              <Mobile>
+                <div className="m-2 text-center">
+                  <p className="text-md text-left text-lg text-primary">
+                    {altar.name}
+                  </p>
+                  <p className="text-md text-left text-sm text-primary">
+                    {altar.user.username} {"> "}{dateCreated}
+                  </p>
+
+                </div>
+              </Mobile>
             </div>
           </>
         ) : null
       )}
-      </div>
-    
+    </div>
   );
 }

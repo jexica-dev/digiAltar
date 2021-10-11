@@ -11,31 +11,7 @@ const handleToggle = () => {
   setNavbarOpen(!navbarOpen)
 }
 
-  const navMenu = () => {
-    return (
-      <div className="menu">
-        <div>
-          <ul>
-            <li>
-              <Link to="/collection">collection</Link>
-            </li>
 
-            <li>
-              {props.user ? (
-                <Link to="/myaltars">create</Link>
-              ) : (
-                <Link to="/login">create</Link>
-              )}
-            </li>
-
-            <li>
-              <Link to="/about">about</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    );
-  };
 
   return (
     <>
@@ -59,7 +35,7 @@ const handleToggle = () => {
         <div className="navBar">
           
           <button onClick={handleToggle}>
-            {navbarOpen ? "Close" : "Open"}
+            
             <Hamburger color="yellow" toggled={navbarOpen} toggle={setNavbarOpen}/>
           </button>
           <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>

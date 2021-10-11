@@ -10,7 +10,7 @@ export default function LoginNav() {
 };
   
   return (
-    <div style={{ ...styles}} className="login-nav-container text-right mt-20 mr-20 -mb-20">
+    <div style={{ ...styles}} className="login-nav-container text-right mt-28 mr-20 -mb-28">
       <Link className="mr-2" to="/login">
         <button  className="button-login py-2 px-1 text-primary bg-trp border-b-2 border-trp hover:border-primary">
           Login

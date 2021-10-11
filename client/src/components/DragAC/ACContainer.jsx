@@ -15,7 +15,7 @@ const stylesAltars = {
   // height: "100vh",
   position: "relative",
   background: 'black',
-  filter: "drop-shadow(0 0 .85rem #ffff0019)",
+  filter: "drop-shadow(0 0 .85rem #ffff0025)",
   borderRadius: "1rem"
 };
 
