@@ -17,10 +17,33 @@ export default function Collection(props) {
 
   const dateCreated = dateFormat(props.altars.created_at, "yyyy-mm-dd");
 
+  const sortedDates = props.altars.created_at.sort((a, b) => {
+    let aDate = new Date(a.createdTime);
+    console.log(aDate)
+    let bDate = new Date(b.createdTime);
+    console.log(bDate)
+  
+    if (aDate < bDate) {
+      return 1;
+    } else if (bDate < aDate) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+
+  const sortedAltars = sortedDates.filter((altar) => {
+    if (altar.id === props.images.altar_id) {
+      return true;
+    }
+    return false;
+  });
+
+
   return (
     <div className="pt-20 pb-20">
 
-      {props.altars.map((altar) =>
+      {sortedAltars.map((altar) =>
         altar.privacy === false ? (
           <>
             <div
