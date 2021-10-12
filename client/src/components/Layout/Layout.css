@@ -6,15 +6,3 @@
   width: 100vw;
 }
 
-@media screen and (min-width: 690px) {
-  body {
-    width: 300px;
-    display: flex;
-  }
-  body div {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-  }
-
-  }

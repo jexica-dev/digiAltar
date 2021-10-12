@@ -3,6 +3,7 @@ import dateFormat from "dateformat";
 import "./Collection.css";
 import { ACExample } from "../../components/DragAC/ACExample";
 import { Desktop, Mobile } from "../../utils/media";
+import { useMediaQuery } from "react-responsive";
 
 export default function Collection(props) {
   const stylesCContainer = {
@@ -11,18 +12,19 @@ export default function Collection(props) {
   };
 
   const stylesCC = {
-    width: "580px",
     alignItems: "center",
+    width: "610px",
+    // transform: "scale(.7)",
+    transformOrigin: "top-left",
   };
+  const isMobile = useMediaQuery({ maxWidth: 992 });
 
-  const dateCreated = dateFormat(props.altars.created_at, "yyyy-mm-dd");
+  const sortedAltars = props.altars.sort((a, b) => {
+    let aDate = new Date(a.created_at);
+    console.log(aDate);
+    let bDate = new Date(b.created_at);
+    console.log(bDate);
 
-  const sortedDates = props.altars.created_at.sort((a, b) => {
-    let aDate = new Date(a.createdTime);
-    console.log(aDate)
-    let bDate = new Date(b.createdTime);
-    console.log(bDate)
-  
     if (aDate < bDate) {
       return 1;
     } else if (bDate < aDate) {
@@ -32,62 +34,72 @@ export default function Collection(props) {
     }
   });
 
-  const sortedAltars = sortedDates.filter((altar) => {
-    if (altar.id === props.images.altar_id) {
-      return true;
-    }
-    return false;
-  });
-
-
   return (
     <div className="pt-20 pb-20">
+      <Desktop>
+        <div className=" w-full grid grid-cols-2" style={stylesCContainer}>
+          {sortedAltars.map((altar) =>
+            altar.privacy === false ? (
+              <>
+                <div className="relative" style={stylesCC}>
+                  <div className=" mt-10">
+                    <ACExample
+                      dragDisabled
+                      setToggleFetch={props.setToggleFetch}
+                      altar={altar}
+                      images={props.images}
+                    />
+                  </div>
 
-      {sortedAltars.map((altar) =>
-        altar.privacy === false ? (
-          <>
-            <div
-              className="m-8 w-screen flex flex-col "
-              style={stylesCContainer}
-            >
-              <div className="m-2 relative" style={stylesCC}>
-                <ACExample
-                  dragDisabled
-                  setToggleFetch={props.setToggleFetch}
-                  altar={altar}
-                  images={props.images}
-                />
-                <Desktop>
-                  <div className="absolute bottom-0 left-0 text-primary text-lg">
-                    <p className="ml-4 mb-2">
-                      {altar.name}
-                    </p>
-                    
+                  <div className="">
+                    <div className="absolute bottom-0 left-0 text-primary text-lg">
+                      <p className="ml-4 mb-2">{altar.name}</p>
+                    </div>
+                    <div className=" absolute bottom-0 right-0 mb-2 mr-4 text-black text-right text-sm hover:text-secondary">
+                      <p className="">{altar.user.username}</p>
+                      <p className="">
+                        {dateFormat(altar.created_at, "yyyy-mm-dd")}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                  <div className="absolute bottom-0 right-0 mb-2 mr-4 text-black text-right text-sm hover:text-secondary">
-                    <p className="">{altar.user.username}</p>
-                    <p className="">{dateCreated}</p>
+              </>
+            ) : null
+          )}
+        </div>
+      </Desktop>
+      <Mobile>
+        <div className=" w-full flex flex-col" style={stylesCContainer}>
+          {sortedAltars.map((altar) =>
+            altar.privacy === false ? (
+              <>
+                <div className="relative w-5/6" style={stylesCC}>
+                  <div className="text-right">
+                    <ACExample
+                      dragDisabled
+                      setToggleFetch={props.setToggleFetch}
+                      altar={altar}
+                      images={props.images}
+                    />
                   </div>
-                  <div className="absolute top-0 left-0 text-primary text-sm mt-2 ml-4">
-                  
-                  </div>
-                </Desktop>
-              </div>
-              <Mobile>
-                <div className="m-2 text-center">
-                  <p className="text-md text-left text-lg text-primary">
+                </div>
+
+                <div className="flex flex-col w-3/5 m-6 text-primary">
+                  <p className="text-right font-medium text-xl text-primary">
                     {altar.name}
                   </p>
-                  <p className="text-md text-left text-sm text-primary">
-                    {altar.user.username} {"> "}{dateCreated}
+                  <p className="text-primary text-lg text-right font-medium">
+                    {altar.user.username}
+                  </p>{" "}
+                  <p className="text-sm text-right font-thin">
+                    {dateFormat(altar.created_at, "yyyy.mm.dd")}
                   </p>
-
                 </div>
-              </Mobile>
-            </div>
-          </>
-        ) : null
-      )}
+              </>
+            ) : null
+          )}
+        </div>
+      </Mobile>
     </div>
   );
 }
