@@ -1,23 +1,28 @@
-import React from "react";
+import { React, useRef} from "react";
 import dateFormat from "dateformat";
 import "./Collection.css";
 import { ACExample } from "../../components/DragAC/ACExample";
 import { Desktop, Mobile } from "../../utils/media";
-import { useMediaQuery } from "react-responsive";
 
 export default function Collection(props) {
   const stylesCContainer = {
     alignItems: "center",
     width: "100%",
+    transform: 'scale(0.9)'
   };
 
   const stylesCC = {
     alignItems: "center",
     width: "610px",
-    // transform: "scale(.7)",
     transformOrigin: "top-left",
   };
-  const isMobile = useMediaQuery({ maxWidth: 992 });
+
+
+  const elRef = useRef();
+  const divContainer = elRef.current;
+  
+// testing on how to make card shrink in mobile mode
+  
 
   const sortedAltars = props.altars.sort((a, b) => {
     let aDate = new Date(a.created_at);
@@ -34,8 +39,10 @@ export default function Collection(props) {
     }
   });
 
+
+
   return (
-    <div className="pt-20 pb-20">
+    <div className="">
       <Desktop>
         <div className=" w-full grid grid-cols-2" style={stylesCContainer}>
           {sortedAltars.map((altar) =>
@@ -74,7 +81,7 @@ export default function Collection(props) {
             altar.privacy === false ? (
               <>
                 <div className="relative w-5/6" style={stylesCC}>
-                  <div className="text-right">
+                  <div ref={divContainer} className="text-right">
                     <ACExample
                       dragDisabled
                       setToggleFetch={props.setToggleFetch}

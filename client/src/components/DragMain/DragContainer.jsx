@@ -15,6 +15,7 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     // for creating the draggable elements later.
     // you can store an image ID to pass into altarimages here for example.
     
+    aq: { top: 405, left: 920, imageType: 44 },
     a: { top: 455, left: 500, imageType: 7 },
     ap: { top: 275, left: 1120, imageType: 42 },
     ac: { top: 180, left: 1100, imageType: 30 },
@@ -51,13 +52,13 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     ad: { top: 580, left: 320, imageType: 5 },
     al: { top: 515, left: 230, imageType: 38 },
     ae: { top: 520, left: 440, imageType: 31 },
-    af: { top: 430, left: 1065, imageType: 32 },
+    af: { top: 430, left: 1080, imageType: 32 },
     ai: { top: 100, left: 700, imageType: 35 },
     ak: { top: 610, left: 200, imageType: 37 },
     aj: { top: 400, left: 635, imageType: 36 },
     am: { top: 75, left: 1000, imageType: 39 },
     an: { top: 330, left: 1150, imageType: 40 },
-    // aq: { top: 50, left: 1000, imageType: 43 },
+    // ar: { top: 300, left: 920, imageType: 45 },
     
 
   });

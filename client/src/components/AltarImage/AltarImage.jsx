@@ -188,14 +188,14 @@ export default function AltarImage(props) {
         <img
           className="w-32"
           src="https://i.imgur.com/UVXDBy8.png"
-          alt="qibla"
+          alt="kaaba"
         />
       ) : null}
 
       {props.imageType === 28 ? (
         <img
           className="w-24"
-          src="https://i.imgur.com/MmWIjDr.png"
+          src="https://i.imgur.com/tlwB5V9.png"
           alt="menorah"
         />
       ) : null}
@@ -319,6 +319,41 @@ export default function AltarImage(props) {
           alt="angel"
         />
       ) : null}
+
+      {props.imageType === 44 ? (
+        <img
+          className="w-64"
+          src="https://i.imgur.com/s0mBLl4.png"
+          alt="rug"
+        />
+      ) : null}
+      
+      {props.imageType === 45 ? (
+        <img
+          className="w-24"
+          src="https://i.imgur.com/cPvzJ2o.png"
+          alt="flower3"
+        />
+      ) : null}
+
+      {props.imageType === 46 ? (
+        <img
+          className="w-24"
+          src="https://i.imgur.com/5qQD8Fd.png"
+          alt="sunflower"
+        />
+      ) : null}
+
+      
+      {props.imageType === 47 ? (
+        <img
+          className="w-24"
+          src="https://i.imgur.com/n1jVOf5.png"
+          alt="flower4"
+        />
+      ) : null}
+
+
     </div>
   );
 }

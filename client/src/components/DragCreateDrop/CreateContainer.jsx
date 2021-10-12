@@ -45,10 +45,10 @@ export default function CreateContainer(props) {
             <CreateBox top="0px" left="500px" imageType={5} />
 
             <CreateBox top="100px" left="0px" imageType={18} />
-            <CreateBox top="100px" left="100px" imageType={20} />
+            <CreateBox top="100px" left="100px" imageType={13} />
             <CreateBox top="100px" left="200px" imageType={12} />
-            <CreateBox top="100px" left="300px" imageType={13} />
-            <CreateBox top="100px" left="380px" imageType={11} />
+            <CreateBox top="100px" left="300px" imageType={11} />
+            <CreateBox top="100px" left="380px" imageType={47} />
             <CreateBox top="100px" left="500px" imageType={19} />
 
             <CreateBox top="200px" left="0px" imageType={37} />
@@ -60,25 +60,32 @@ export default function CreateContainer(props) {
 
             <CreateBox top="300px" left="0px" imageType={22} />
             <CreateBox top="300px" left="100px" imageType={25} />
-            <CreateBox top="300px" left="200px" imageType={40} />
-            <CreateBox top="300px" left="300px" imageType={8} />
+            <CreateBox top="300px" left="200px" imageType={20} />
+            <CreateBox top="300px" left="300px" imageType={40} />
             <CreateBox top="300px" left="380px" imageType={14} />
             <CreateBox top="300px" left="500px" imageType={17} />
 
-            <CreateBox top="400px" left="0px" imageType={32} />
-            <CreateBox top="400px" left="100px" imageType={16} />
+            <CreateBox top="400px" left="0px" imageType={46} />
+            <CreateBox top="400px" left="100px" imageType={32} />
             <CreateBox top="400px" left="200px" imageType={3} />
             <CreateBox top="400px" left="300px" imageType={24} />
             <CreateBox top="400px" left="380px" imageType={23} />
             <CreateBox top="400px" left="500px" imageType={30} />
             
+
             <CreateBox top="500px" left="0px" imageType={34} />
             <CreateBox top="500px" left="100px" imageType={26} />
             <CreateBox top="500px" left="200px" imageType={31} />
             <CreateBox top="500px" left="300px" imageType={38} />
-            <CreateBox top="500px" left="380px" imageType={15} />
-            <CreateBox top="500px" left="500px" imageType={21} />
+            <CreateBox top="500px" left="380px" imageType={39} />
+            <CreateBox top="500px" left="500px" imageType={15} />
 
+            <CreateBox top="600px" left="0px" imageType={44} />
+            <CreateBox top="600px" left="100px" imageType={8} />
+            <CreateBox top="600px" left="200px" imageType={45} />
+            <CreateBox top="600px" left="300px" imageType={21} />
+            <CreateBox top="600px" left="380px" imageType={16} />
+            <CreateBox top="600px" left="500px" imageType={27} />
             
 
  {/* {           const numberType1 = [16, 30, ]
