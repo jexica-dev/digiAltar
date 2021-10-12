@@ -53,12 +53,12 @@ export default function Collection(props) {
 
                   <div className="">
                     <div className="absolute bottom-0 left-0 text-primary text-lg">
-                      <p className="ml-4 mb-2">{altar.name}</p>
+                      <p className="ml-4 mb-2">{altar.name}</p> 
                     </div>
-                    <div className=" absolute bottom-0 right-0 mb-2 mr-4 text-black text-right text-sm hover:text-secondary">
-                      <p className="">{altar.user.username}</p>
+                    <div className=" absolute bottom-0 right-0 mb-2 mr-4 text-black text-right text-sm hover:text-black hover:bg-primary">
+                      <p className="">&nbsp;{altar.user.username}&nbsp;</p>
                       <p className="">
-                        {dateFormat(altar.created_at, "yyyy-mm-dd")}
+                      &nbsp;{dateFormat(altar.created_at, "yyyy-mm-dd")}&nbsp;
                       </p>
                     </div>
                   </div>
