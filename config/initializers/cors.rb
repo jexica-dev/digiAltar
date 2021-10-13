@@ -7,11 +7,11 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://digialtar.netlify.app/'
+    origins 'https://digialtar.netlify.app'
     # ^ https://digialtar.netlify.app/
 
     # https://digialtar-api.herokuapp.com/
-    resource 'https://digialtar-api.herokuapp.com/',
+    resource 'https://digialtar-api.herokuapp.com',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
