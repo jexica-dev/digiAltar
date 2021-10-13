@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const baseURL = 'http://localhost:3000';
+// the link heroku deployed link
+
+const baseURL = 'https://digialtar-api.herokuapp.com/';
 
 const api = axios.create({
   baseURL: baseURL,
