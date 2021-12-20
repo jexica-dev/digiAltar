@@ -10,10 +10,11 @@ const styles = {
   position: "relative",
 };
 export const DragContainer = ({ hideSourceOnDrag }) => {
+
   const [boxes, setBoxes] = useState({
-    // this data can hold anything that is relevant
-    // for creating the draggable elements later.
-    // you can store an image ID to pass into altarimages here for example.
+
+    // image ID to pass into altarimages
+    // renders image into the invisible boxes 
     
     aq: { top: 405, left: 920, imageType: 44 },
     a: { top: 455, left: 500, imageType: 7 },
@@ -58,10 +59,12 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     aj: { top: 400, left: 635, imageType: 36 },
     am: { top: 75, left: 1000, imageType: 39 },
     an: { top: 330, left: 1150, imageType: 40 },
-    // ar: { top: 300, left: 920, imageType: 45 },
-    
-
+    // ar: { top: 300, left: 920, imageType: __ },    
   });
+
+  // These are the variables and function that React DnD library provides 
+  // This specifically updates the objects into a new location (temporarily)
+
   const moveBox = useCallback(
     (id, left, top) => {
       setBoxes(
@@ -74,6 +77,7 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     },
     [boxes, setBoxes]
   );
+
   const [, drop] = useDrop(
     () => ({
       accept: "box",
@@ -87,21 +91,24 @@ export const DragContainer = ({ hideSourceOnDrag }) => {
     }),
     [moveBox]
   );
+
   return (
     <div ref={drop} style={styles}>
       {Object.keys(boxes).map((key) => {
-        // remember this is a deconstruction
-        // which means we are pulling variables out of the
+
+        // this is a deconstruction
+        // we are pulling variables from the 
         // boxes[key] object.
+
         const box = boxes[key];
         return (
 
           // this is where we get the data from the state.
-          // in here we are mapping through the list of boxes and creating
+          // in here we are mapping through the list of "boxes" and creating
           // an element on the page for each box
-          // we can the contents of this box component to an altarimage so
-          // that we are dragging images
-          // around instead of text.
+          // we change the contents of this box component to an altarimage
+          // into the dragging images
+
           <Box
             key={key}
             id={key}

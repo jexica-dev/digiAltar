@@ -16,6 +16,8 @@ const stylesAltars = {
   borderRadius: "1rem"
 };
 
+// The container that accepts the altar objects from menu into the new digiAltar
+
 export const ACContainer = ({
   hideSourceOnDrag,
   dragDisabled,
@@ -25,6 +27,10 @@ export const ACContainer = ({
 }) => {
   const containerDiv = useRef();
 
+// Using the UseEffect, we set the state of the boxes, which hold the images.
+// Each image is linked its altar and has a unique imageType (which is set/updated in AltarImage.jsx)
+// Each image also has its own coordinates (top, left), which is set and updated in the useEffect. 
+  
   useEffect(() => {
     const dragImages = images.reduce((acc, image) => {
       if (image.altar_id === altar.id) {
@@ -41,6 +47,9 @@ export const ACContainer = ({
 
   const [boxes, setBoxes] = useState({});
 
+
+// Each time the boxes are moved, they're updated and the boxes are set.
+  
   const moveBox = useCallback(
     (id, left, top) => {
       setBoxes(
@@ -68,6 +77,14 @@ export const ACContainer = ({
     [boxes, setBoxes]
   );
 
+
+
+// This is from React DnD's library that allows us to drag - "drop" an object
+// this is the container that will accept the box (that holds the image)
+// In here, we recall from above the new state changes for the boxes
+// based on React Dnd's library components ".getDifferenceFromInitialOffset"
+// This helps calculate the new location by adding/subtracting values from the top/left parameters  
+
   const [, drop] = useDrop(
     () => ({
       accept: "box",
@@ -92,6 +109,7 @@ export const ACContainer = ({
           const offset = monitor.getClientOffset();
           let x = offset.x;
           let y = offset.y;
+          // This is to make sure we calculate within the container by subtracting x or y amount from the top left corner.
           x -= containerDiv.current.getBoundingClientRect().left;
           y -= containerDiv.current.getBoundingClientRect().top;
           (async () => {

@@ -21,19 +21,18 @@ export default function Collection(props) {
   const elRef = useRef();
   const divContainer = elRef.current;
   
-// testing on how to make card shrink in mobile mode
   
 
   const sortedAltars = props.altars.sort((a, b) => {
     let aDate = new Date(a.created_at);
-    console.log(aDate);
-    let bDate = new Date(b.created_at);
-    console.log(bDate);
 
+    let bDate = new Date(b.created_at);
+
+    
     if (aDate < bDate) {
-      return 1;
-    } else if (bDate < aDate) {
       return -1;
+    } else if (bDate < aDate) {
+      return 1;
     } else {
       return 0;
     }

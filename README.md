@@ -1,7 +1,6 @@
 # digi-Altar
 
-**digi-Altar** is a cyber spiritual space, where you can create, share, and inspire your own altar using a hybrid mix of relics and artifacts. Images may link to actual objects that you may purchase and add to your own physical sanctuary. 
-
+**digi-Altar** is a cyber spiritual space, where you can create, share, and inspire your own altar using a hybrid mix of relics and artifacts.
 
 <br>
 
@@ -153,16 +152,16 @@ src
 | Task                 | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------  | :------: | :------------: | :-----------: | :---------: |
 | Wireframe + Diagrams |    M     |     3 hrs      |     5 hrs     |    5 hrs    |
-| CRUD Routes + Models |    H     |     3 hrs      |      TBD      |     TBD     |
-|    Authentication    |    H     |     3 hrs      |      TBD      |     TBD     |
-| !Seed Data (+Images) |    H     |     3 hrs      |      TBD      |     TBD     |
-| Connect FrontEnd API |    H     |     3 hrs      |      TBD      |     TBD     |
-|   Create Components  |    H     |     3 hrs      |      TBD      |     TBD     |
-|    Create Screens    |    H     |     3 hrs      |      TBD      |     TBD     |
-|  Make AltarForm+Card |    H     |     6 hrs      |      TBD      |     TBD     |
-| Complete Dragdrog.js |    H     |     3 hrs      |      TBD      |     TBD     |
-| Style+ Functionality |    H     |     6 hrs      |      TBD      |     TBD     |
-| TOTAL                |          |    39 hrs      |       TBD      |     TBD     |
+| CRUD Routes + Models |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+|    Authentication    |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| !Seed Data (+Images) |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Connect FrontEnd API |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+|   Create Components  |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+|    Create Screens    |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+|  Make AltarForm+Card |    H     |     6 hrs      |     3 hrs     |    3 hrs    |
+| Complete Dragdrog.js |    H     |     3 hrs      |     5 hrs     |    6 hrs    |
+| Style+ Functionality |    H     |     6 hrs      |     3 hrs     |    4 hrs    |
+| TOTAL                |          |    39 hrs      |    34 hrs     |    36 hrs   |
 
 
 
@@ -179,13 +178,62 @@ src
 
 ## Post-MVP
 
-- Adding more mobile functionality, modals for each item on the home page.
+- Adding more mobile functionality / Create an App. Make the image library larger or admin rights on images could be added.
 
 ***
 
 ## Code Showcase
 
 <br>
+
+```
+
+  const [, drop] = useDrop(
+    () => ({
+      accept: "box",
+      async drop(image, monitor) {
+        if (dragDisabled) return;
+
+        if (image.id) {
+          const delta = monitor.getDifferenceFromInitialOffset();
+          const left = Math.round(image.left + delta.x);
+          const top = Math.round(image.top + delta.y);
+          moveBox(image.id, left, top);
+          await updateImage(image.id, {
+            left: left,
+            top: top,
+            image_type: image.imageType,
+            altar_id: altar.id,
+          });
+
+          setToggleFetch((prevState) => !prevState);
+        } else {
+          const offset = monitor.getClientOffset();
+          let x = offset.x;
+          let y = offset.y;
+      
+          x -= containerDiv.current.getBoundingClientRect().left;
+          y -= containerDiv.current.getBoundingClientRect().top;
+          (async () => {
+            let data = await createImage({
+              left: x,
+              top: y,
+              image_type: image.imageType,
+              altar_id: altar.id,
+            });
+            createBox(data.id, x, y, image.imageType);
+            setToggleFetch((prevState) => !prevState);
+          })();
+        }
+
+        return undefined;
+      },
+    }),
+    [moveBox]
+  );
+
+
+```
 
 ## Code Issues & Resolutions
 
