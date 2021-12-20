@@ -32,10 +32,6 @@ export default function CreateContainer(props) {
           <div className="-mb-2 relative mt-4 clear-both overflow-scroll w-full h-96 ">
             {/* These are the images that you can add to your altar */}
 
-            {/* <AltarImage imageType={props.imageType} /> */}
-
-
-
             
             <CreateBox top="0px" left="0px" imageType={9} />
             <CreateBox top="0px" left="100px" imageType={4} />
