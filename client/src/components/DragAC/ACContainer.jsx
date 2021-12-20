@@ -11,10 +11,7 @@ import {
 } from "../../services/images.js";
 
 const stylesAltars = {
-  // width: "100vw",
-  // height: "100vh",
   position: "relative",
-  // background: 'white',
   filter: "drop-shadow(0 0 1.85rem #ffff0025)",
   borderRadius: "1rem"
 };
@@ -139,7 +136,6 @@ export const ACContainer = ({
                 hideSourceOnDrag={hideSourceOnDrag}
               >
                 <AltarImage imageType={box.imageType} />
-                {/* we can put anything we want in here, like altarimages */}
               </ACBox>
             </button>
           );
