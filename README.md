@@ -4,7 +4,6 @@
 
 [Deployed](https://digialtar.netlify.app/)
 
-
 <br>
 
 ## MVP
