@@ -2,7 +2,7 @@
 
 **digi-Altar** is a cyber spiritual space, where you can create, share, and inspire your own altar using a hybrid mix of relics and artifacts.
 
-[Deployed] (https://digialtar.netlify.app/)
+[Deployed](https://digialtar.netlify.app/)
 
 
 <br>
