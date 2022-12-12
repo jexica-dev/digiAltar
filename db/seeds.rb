@@ -11,22 +11,22 @@ User.destroy_all
 
 puts "#{User.count} users created"
 
-Altar.create!(name: 'Cyberella Shrine', user: @admin, privacy: true)
-Altar.create!(name: 'Holy Techspec', user: @admin, privacy: false)
-altar1 = Altar.create!(name: 'Hipnotic Sanctuary', user: @admin, privacy: false)
-Altar.create!(name: 'Crypto Spiritual', user: @admin, privacy: false)
+# Altar.create!(name: 'Cyberella Shrine', user: @admin, privacy: true)
+# Altar.create!(name: 'Holy Techspec', user: @admin, privacy: false)
+# altar1 = Altar.create!(name: 'Hipnotic Sanctuary', user: @admin, privacy: false)
+# Altar.create!(name: 'Crypto Spiritual', user: @admin, privacy: false)
 
-@altars = Altar.all
+# @altars = Altar.all
 
-puts "#{Altar.count} altars created"
+# puts "#{Altar.count} altars created"
 
-pp altar1
+# pp altar1
 
-@image1 = Image.create!(image_type: 1, top:'25', left:'35', altar_id: altar1.id)
-@image2 = Image.create!(name: 'buddha1', img_url:'https://i.imgur.com/iRGDCuu.png', image_type: 2, top:'75', left:'15', altar_id: altar1.id)
+# @image1 = Image.create!(image_type: 1, top:'25', left:'35', altar_id: altar1.id)
+# @image2 = Image.create!(name: 'buddha1', img_url:'https://i.imgur.com/iRGDCuu.png', image_type: 2, top:'75', left:'15', altar_id: altar1.id)
 
-puts "#{Image.count} images created"
-pp @image1
+# puts "#{Image.count} images created"
+# pp @image1
 # @altarImages = Image.all.filter()
 
 # @altars.first.images << image1
